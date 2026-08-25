@@ -220,8 +220,8 @@ function ProductsPage() {
               return (
                 <div key={catId} id={catId} className="flow-root border-b border-border/40 pb-12 last:border-0 last:pb-0 scroll-mt-24">
                   {/* Category Header Card with Image - Floated Left */}
-                  <div className="float-left w-full lg:w-[23%] lg:mr-[2%] mb-6 bg-card rounded-lg border border-border overflow-hidden flex flex-col">
-                    <div className="aspect-[2/1] overflow-hidden bg-bone relative">
+                  <div className="float-left w-full lg:w-[23%] lg:mr-[2%] lg:h-[306px] mb-6 bg-card rounded-lg border border-border overflow-hidden flex flex-col">
+                    <div className="aspect-[2/1] lg:aspect-none lg:h-[120px] overflow-hidden bg-bone relative">
                       <img
                         src={categoryImages[catId] || catHerbalImg}
                         alt={catInfo?.label || catId}

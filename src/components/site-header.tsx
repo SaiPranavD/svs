@@ -39,7 +39,7 @@ export function SiteHeader() {
           <Link
             to="/"
             className={isTransparent ? "text-[0.85rem] font-semibold tracking-wide text-white/95 transition-colors duration-300 hover:text-white" : "text-[0.8rem] font-medium tracking-wide text-foreground/75 transition-colors duration-300 hover:text-forest"}
-            activeProps={{ className: isTransparent ? "text-white underline decoration-2 underline-offset-8" : "text-forest" }}
+            activeProps={{ className: isTransparent ? "text-white underline decoration-2 underline-offset-8" : "text-forest underline decoration-2 underline-offset-8 font-semibold" }}
             activeOptions={{ exact: true }}
           >
             Home
@@ -47,14 +47,14 @@ export function SiteHeader() {
           <Link
             to="/about"
             className={isTransparent ? "text-[0.85rem] font-semibold tracking-wide text-white/80 transition-colors duration-300 hover:text-white" : "text-[0.8rem] font-medium tracking-wide text-foreground/75 transition-colors duration-300 hover:text-forest"}
-            activeProps={{ className: isTransparent ? "text-white" : "text-forest" }}
+            activeProps={{ className: isTransparent ? "text-white underline decoration-2 underline-offset-8" : "text-forest underline decoration-2 underline-offset-8 font-semibold" }}
           >
             About Us
           </Link>
           <Link
             to="/products"
             className={isTransparent ? "text-[0.85rem] font-semibold tracking-wide text-white/80 transition-colors duration-300 hover:text-white" : "text-[0.8rem] font-medium tracking-wide text-foreground/75 transition-colors duration-300 hover:text-forest"}
-            activeProps={{ className: isTransparent ? "text-white" : "text-forest" }}
+            activeProps={{ className: isTransparent ? "text-white underline decoration-2 underline-offset-8" : "text-forest underline decoration-2 underline-offset-8 font-semibold" }}
           >
             Products
           </Link>
