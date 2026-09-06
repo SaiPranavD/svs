@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Leaf, FlaskConical, Search, X } from "lucide-react";
 import { products, categories, Product, ProductCategory } from "@/lib/products";
 import heroImg from "@/assets/hero-botanical.jpg";
@@ -9,7 +9,20 @@ import catPhytoImg from "@/assets/category-phytochemicals.jpg";
 import catOilsImg from "@/assets/category-oils.jpg";
 import catMineralsImg from "@/assets/category-minerals.jpg";
 
+interface ProductsSearch {
+  category?: string;
+  tab?: string;
+  q?: string;
+}
+
 export const Route = createFileRoute("/products/")({
+  validateSearch: (search: Record<string, unknown>): ProductsSearch => {
+    return {
+      category: typeof search.category === "string" ? search.category : undefined,
+      tab: typeof search.tab === "string" ? search.tab : undefined,
+      q: typeof search.q === "string" ? search.q : undefined,
+    };
+  },
   head: () => ({
     meta: [
       { title: "Ingredient Portfolio — SVS Nutraceuticals" },
@@ -63,9 +76,60 @@ function getSuperCategory(category: string): "herbal-extracts" | "vitamins-miner
 }
 
 function ProductsPage() {
-  const [query, setQuery] = useState("");
-  const [activeTab, setActiveTab] = useState<SuperCategoryId>("all");
+  const search = Route.useSearch();
+  const [query, setQuery] = useState(search.q || "");
+  const [activeTab, setActiveTab] = useState<SuperCategoryId>(() => {
+    if (
+      search.tab === "vitamins-minerals" ||
+      search.category === "vitamins-minerals" ||
+      search.category === "natural-vitamins" ||
+      search.category === "natural-minerals" ||
+      search.category === "custom-formulations"
+    ) {
+      return "vitamins-minerals";
+    }
+    if (search.tab === "herbal-extracts" || search.category === "herbal-extracts") {
+      return "herbal-extracts";
+    }
+    return "all";
+  });
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  useEffect(() => {
+    const requestedTab =
+      search.tab === "vitamins-minerals" ||
+      search.category === "vitamins-minerals" ||
+      search.category === "natural-vitamins" ||
+      search.category === "natural-minerals" ||
+      search.category === "custom-formulations"
+        ? "vitamins-minerals"
+        : search.tab === "herbal-extracts" || search.category === "herbal-extracts"
+          ? "herbal-extracts"
+          : search.tab === "all"
+            ? "all"
+            : undefined;
+
+    if (requestedTab) {
+      setActiveTab(requestedTab);
+    }
+    if (search.q !== undefined) {
+      setQuery(search.q);
+    }
+
+    const targetCategory = search.category || (typeof window !== "undefined" ? window.location.hash?.replace("#", "") : "");
+    if (targetCategory) {
+      const targetId = targetCategory === "vitamins-minerals" ? "natural-vitamins" : targetCategory;
+      setTimeout(() => {
+        const el =
+          document.getElementById(targetCategory) ||
+          document.getElementById(targetId) ||
+          document.getElementById("catalog-section");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 150);
+    }
+  }, [search.category, search.tab, search.q]);
 
   const filtered = products.filter((p) => {
     const q = query.toLowerCase();
@@ -146,8 +210,13 @@ function ProductsPage() {
                 } else {
                   setActiveTab("all");
                 }
+                setQuery("");
                 setTimeout(() => {
-                  const el = document.getElementById(cat.id);
+                  const targetId = cat.id === "vitamins-minerals" ? "natural-vitamins" : cat.id;
+                  const el =
+                    document.getElementById(cat.id) ||
+                    document.getElementById(targetId) ||
+                    document.getElementById("catalog-section");
                   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
                 }, 100);
               }}
@@ -174,7 +243,7 @@ function ProductsPage() {
         </div>
       </section>
 
-      <div className="container-editorial py-16">
+      <div id="catalog-section" className="container-editorial py-16 scroll-mt-20">
         {/* Real-time search bar & Category pills header container */}
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between mb-16">
           {/* Real-time search bar */}
@@ -218,7 +287,7 @@ function ProductsPage() {
               const catProducts = filtered.filter((p) => p.category === catId);
 
               return (
-                <div key={catId} id={catId} className="flow-root border-b border-border/40 pb-12 last:border-0 last:pb-0 scroll-mt-24">
+                <div key={catId} id={catId === "natural-vitamins" ? "vitamins-minerals" : catId} className="flow-root border-b border-border/40 pb-12 last:border-0 last:pb-0 scroll-mt-24">
                   {/* Category Header Card with Image - Floated Left */}
                   <div className="float-left w-full lg:w-[23%] lg:mr-[2%] lg:h-[306px] mb-6 bg-card rounded-lg border border-border overflow-hidden flex flex-col">
                     <div className="aspect-[2/1] lg:aspect-none lg:h-[120px] overflow-hidden bg-bone relative">
