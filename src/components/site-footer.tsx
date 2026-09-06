@@ -15,9 +15,8 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/75">
-            A research-driven manufacturer of standardized botanical extracts and nutraceutical
-            ingredients, serving global partners in dietary supplement, functional food and
-            pharmaceutical categories since 2024.
+            We believe in building long-term business relationships based on quality, trust,
+            reliability, and customer satisfaction.
           </p>
 
         </div>
