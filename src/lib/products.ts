@@ -22,7 +22,7 @@ export const categories: Record<ProductCategory, { label: string; description: s
   },
   "essential-oils": {
     label: "Essential Oils",
-    description: "Therapeutic-grade essential oils for aromatherapy, cosmetics, and wellness.",
+    description: "Therapeutic-grade essential oils, cold-pressed seed oils, and specialty aromatic extracts for wellness, cosmetics, and aromatherapy.",
   },
   probiotics: {
     label: "Probiotics",
@@ -376,6 +376,867 @@ export const products: Product[] = [
       "ISO 22000"
     ]
   },
+  {
+    "slug": "basil-oil",
+    "name": "Basil Oil",
+    "botanical": "Ocimum basilicum",
+    "category": "essential-oils",
+    "tagline": "Steam-distilled sweet Basil Oil standardized for methyl chavicol and linalool",
+    "image": "/products/ocimum-basilicum-tulsi-leaf-oil.jpg",
+    "standardization": "Methyl Chavicol ≥ 70%",
+    "partUsed": "Leaves & Flowering Tops",
+    "origin": "India",
+    "benefits": [
+      "Sharpens mental alertness and alleviates fatigue",
+      "Natural antispasmodic and muscle-tension relief",
+      "Crisp, spicy-herbal aroma for uplifting blends"
+    ],
+    "applications": [
+      "Aromatherapy & Diffusers",
+      "Topical Muscle Balms",
+      "Flavorings",
+      "Natural Perfumery"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale amber liquid"
+      },
+      {
+        "label": "Specific Gravity",
+        "value": "0.950 - 0.970"
+      },
+      {
+        "label": "Optical Rotation",
+        "value": "-15° to -5°"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "bergamot-oil",
+    "name": "Bergamot Oil",
+    "botanical": "Citrus bergamia",
+    "category": "essential-oils",
+    "tagline": "Cold-expressed pure Bergamot Oil rich in limonene and linalyl acetate",
+    "image": "/products/bergamot-oil.jpg",
+    "standardization": "Limonene ≥ 35% / Linalyl Acetate ≥ 25%",
+    "partUsed": "Peel / Rind",
+    "origin": "Italy / India",
+    "benefits": [
+      "Uplifting citrus aroma known to reduce stress and anxiety",
+      "Natural purifying and balancing action for oily skin",
+      "Key top note in fine perfumery and sensory products"
+    ],
+    "applications": [
+      "Aromatherapy & Stress Care",
+      "Fine Fragrances & Perfumery",
+      "Skincare Cleansers",
+      "Flavorings & Beverages"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Greenish to golden yellow liquid"
+      },
+      {
+        "label": "Limonene Content",
+        "value": "≥ 35.0%"
+      },
+      {
+        "label": "Linalyl Acetate",
+        "value": "≥ 25.0%"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "black-seed-oil",
+    "name": "Black Seed (Kalonji) Oil",
+    "botanical": "Nigella sativa",
+    "category": "essential-oils",
+    "tagline": "Pure cold-pressed Black Seed Oil standardized for active thymoquinone",
+    "image": "/products/black-seed-oil.jpg",
+    "standardization": "Thymoquinone ≥ 1.0% / Cold Pressed",
+    "partUsed": "Seed",
+    "origin": "India",
+    "benefits": [
+      "Powerful antioxidant and anti-inflammatory support",
+      "Supports immune resilience and respiratory vitality",
+      "Traditional therapeutic tonic for metabolic health"
+    ],
+    "applications": [
+      "Nutraceuticals",
+      "Softgel Formulations",
+      "Functional Foods",
+      "Therapeutic Skincare"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Dark amber to brownish liquid"
+      },
+      {
+        "label": "Thymoquinone Content",
+        "value": "≥ 1.0%"
+      },
+      {
+        "label": "Specific Gravity",
+        "value": "0.915 - 0.935"
+      }
+    ],
+    "packaging": "25 kg / 190 kg drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "calendula-oil",
+    "name": "Calendula Oil",
+    "botanical": "Calendula officinalis",
+    "category": "essential-oils",
+    "tagline": "Therapeutic Calendula Oil rich in soothing triterpenoids and flavonoids",
+    "image": "/products/calendula-oil.jpg",
+    "standardization": "Total Flavonoids ≥ 1.0% / Infused",
+    "partUsed": "Flower / Petals",
+    "origin": "India",
+    "benefits": [
+      "Remarkable soothing support for irritated or dry skin",
+      "Accelerates tissue recovery and protects delicate dermal barriers",
+      "Ideal for sensitive and infant care skincare formulations"
+    ],
+    "applications": [
+      "Baby Care Products",
+      "Dermatological Balms",
+      "Sensitive Skincare",
+      "Healing Ointments"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Golden yellow to orange oily liquid"
+      },
+      {
+        "label": "Peroxide Value",
+        "value": "≤ 10 meq O2/kg"
+      },
+      {
+        "label": "Acid Value",
+        "value": "≤ 1.5 mg KOH/g"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "castor-oil",
+    "name": "Castor Oil",
+    "botanical": "Ricinus communis",
+    "category": "essential-oils",
+    "tagline": "Pure cold-pressed Castor Oil standardized for ricinoleic acid",
+    "image": "/products/castor-oil.jpg",
+    "standardization": "Ricinoleic Acid ≥ 85% / USP Grade",
+    "partUsed": "Seed",
+    "origin": "India",
+    "benefits": [
+      "High viscosity natural humectant and conditioning agent",
+      "Strengthens hair roots and promotes thick growth",
+      "Provides intense emolliency for skin ointments"
+    ],
+    "applications": [
+      "Pharmaceutical Excipients",
+      "Cosmetic & Haircare",
+      "Topical Ointments",
+      "Personal Care"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Nearly colorless or pale yellow viscous liquid"
+      },
+      {
+        "label": "Ricinoleic Acid",
+        "value": "≥ 85.0%"
+      },
+      {
+        "label": "Hydroxyl Value",
+        "value": "160 - 168"
+      }
+    ],
+    "packaging": "25 kg / 200 kg HDPE drum",
+    "shelfLife": "36 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "citronella-oil",
+    "name": "Citronella Oil",
+    "botanical": "Cymbopogon nardus",
+    "category": "essential-oils",
+    "tagline": "Pure natural Citronella Oil rich in citronellal and geraniol",
+    "image": "/products/citronella-oil.jpg",
+    "standardization": "Citronellal ≥ 35% / Geraniol ≥ 20%",
+    "partUsed": "Grass / Aerial Parts",
+    "origin": "India",
+    "benefits": [
+      "Industry-standard natural insect and pest repellent",
+      "Invigorating, crisp citrus-herbaceous scent profile",
+      "Antimicrobial surface and air-purification support"
+    ],
+    "applications": [
+      "Natural Repellents",
+      "Home & Air Care",
+      "Aromatherapy",
+      "Personal Hygiene"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Pale yellow to yellowish liquid"
+      },
+      {
+        "label": "Citronellal Content",
+        "value": "≥ 35.0%"
+      },
+      {
+        "label": "Geraniol Content",
+        "value": "≥ 20.0%"
+      }
+    ],
+    "packaging": "25 kg / 180 kg drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "clove-oil",
+    "name": "Clove Oil",
+    "botanical": "Syzygium aromaticum",
+    "category": "essential-oils",
+    "tagline": "Steam-distilled pure Clove Oil high in therapeutic eugenol content",
+    "image": "/products/clove-oil.jpg",
+    "standardization": "Eugenol ≥ 85% / Steam Distilled",
+    "partUsed": "Bud / Leaf",
+    "origin": "India / Indonesia",
+    "benefits": [
+      "Potent antimicrobial and oral health defense",
+      "Natural analgesic properties for topical relief",
+      "Warm, aromatic fragrance for soothing blends"
+    ],
+    "applications": [
+      "Oral Care Formulations",
+      "Pharmaceutical Topicals",
+      "Aromatherapy & Fragrance",
+      "Flavoring Agents"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale yellow liquid"
+      },
+      {
+        "label": "Eugenol Content",
+        "value": "≥ 85.0%"
+      },
+      {
+        "label": "Refractive Index",
+        "value": "1.528 - 1.537"
+      }
+    ],
+    "packaging": "25 kg / 180 kg drum",
+    "shelfLife": "36 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "eucalyptus-oil",
+    "name": "Eucalyptus Oil",
+    "botanical": "Eucalyptus globulus",
+    "category": "essential-oils",
+    "tagline": "Steam-distilled pure Eucalyptus Oil standardized for 1,8-cineole (eucalyptol)",
+    "image": "/products/eucalyptus-oil.jpg",
+    "standardization": "1,8-Cineole (Eucalyptol) ≥ 80%",
+    "partUsed": "Leaves",
+    "origin": "India / Australia",
+    "benefits": [
+      "Supports clear respiratory passages and easy breathing",
+      "Natural invigorating rub for muscle comfort",
+      "Potent antimicrobial vapor profile"
+    ],
+    "applications": [
+      "Respiratory Care & Inhalants",
+      "Pain Relief Rubs & Balms",
+      "Aromatherapy Diffusions",
+      "Oral Care"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale yellow liquid"
+      },
+      {
+        "label": "1,8-Cineole Content",
+        "value": "≥ 80.0%"
+      },
+      {
+        "label": "Refractive Index",
+        "value": "1.458 - 1.465"
+      }
+    ],
+    "packaging": "25 kg / 180 kg drum",
+    "shelfLife": "36 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "fennel-oil",
+    "name": "Fennel Oil",
+    "botanical": "Foeniculum vulgare",
+    "category": "essential-oils",
+    "tagline": "Steam-distilled sweet Fennel Oil standardized for trans-anethole",
+    "image": "/products/fennel-oil.jpg",
+    "standardization": "trans-Anethole ≥ 65%",
+    "partUsed": "Seed",
+    "origin": "India",
+    "benefits": [
+      "Supports healthy digestion and relieves abdominal spasms",
+      "Sweet, herbaceous aroma for uplifting sensory formulations",
+      "Natural carminative and cleansing tonic"
+    ],
+    "applications": [
+      "Digestive Health",
+      "Aromatherapy",
+      "Flavors & Fragrance",
+      "Nutraceuticals"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale yellow liquid"
+      },
+      {
+        "label": "trans-Anethole",
+        "value": "≥ 65.0%"
+      },
+      {
+        "label": "Specific Gravity",
+        "value": "0.953 - 0.973"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "flaxseed-oil",
+    "name": "Flaxseed (Linseed) Oil",
+    "botanical": "Linum usitatissimum",
+    "category": "essential-oils",
+    "tagline": "Cold-pressed Flaxseed Oil packed with plant-based Omega-3 Alpha-Linolenic Acid (ALA)",
+    "image": "/products/flaxseed-oil.jpg",
+    "standardization": "Alpha-Linolenic Acid (ALA) ≥ 50%",
+    "partUsed": "Seed",
+    "origin": "India",
+    "benefits": [
+      "Exceptional plant source of Omega-3 fatty acids",
+      "Supports cardiovascular health and normal cholesterol",
+      "Promotes cellular wellness and joint comfort"
+    ],
+    "applications": [
+      "Dietary Supplements",
+      "Softgel Encapsulation",
+      "Functional Foods",
+      "Nutritional Blends"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Golden yellow oily liquid"
+      },
+      {
+        "label": "ALA Content",
+        "value": "≥ 50.0%"
+      },
+      {
+        "label": "Acid Value",
+        "value": "≤ 2.0 mg KOH/g"
+      }
+    ],
+    "packaging": "25 kg / 190 kg drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "garlic-oil",
+    "name": "Garlic Oil",
+    "botanical": "Allium sativum",
+    "category": "essential-oils",
+    "tagline": "Steam-distilled concentrated Garlic Oil rich in diallyl trisulfide and allicin metabolites",
+    "image": "/products/garlic-oil.jpg",
+    "standardization": "Allicin Potential ≥ 1.0% / Diallyl Sulfides",
+    "partUsed": "Bulb / Cloves",
+    "origin": "India",
+    "benefits": [
+      "Supports healthy cardiovascular circulation and blood pressure",
+      "Potent immune resilience and systemic antimicrobial benefits",
+      "Highly concentrated therapeutic phytonutrient profile"
+    ],
+    "applications": [
+      "Dietary Supplements",
+      "Enteric Softgels",
+      "Cardiovascular Formulations",
+      "Functional Nutraceuticals"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Clear reddish-orange to amber liquid"
+      },
+      {
+        "label": "Diallyl Disulfide & Trisulfide",
+        "value": "≥ 75.0%"
+      },
+      {
+        "label": "Specific Gravity",
+        "value": "1.050 - 1.090"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "lavender-oil",
+    "name": "Lavender Oil",
+    "botanical": "Lavandula angustifolia",
+    "category": "essential-oils",
+    "tagline": "Pure therapeutic Lavender Oil rich in linalyl acetate and linalool",
+    "image": "/products/lavender-oil.jpg",
+    "standardization": "Linalyl Acetate ≥ 30% / Linalool ≥ 28%",
+    "partUsed": "Flowering Tops",
+    "origin": "India / France",
+    "benefits": [
+      "Renowned for deep relaxation, calming, and sleep support",
+      "Gently calms skin redness, irritation, and burns",
+      "Classic, timeless floral fragrance for wellness blends"
+    ],
+    "applications": [
+      "Aromatherapy & Stress Care",
+      "Cosmetics & Skincare",
+      "Sleep Aid Products",
+      "Personal Care"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale yellow clear liquid"
+      },
+      {
+        "label": "Linalyl Acetate",
+        "value": "≥ 30.0%"
+      },
+      {
+        "label": "Linalool",
+        "value": "≥ 28.0%"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "neem-oil",
+    "name": "Neem Oil",
+    "botanical": "Azadirachta indica",
+    "category": "essential-oils",
+    "tagline": "Cold-pressed pure Neem Oil standardized for active azadirachtin",
+    "image": "/products/neem-oil.jpg",
+    "standardization": "Azadirachtin ≥ 2000 ppm / Cold Pressed",
+    "partUsed": "Seed / Kernel",
+    "origin": "India",
+    "benefits": [
+      "Powerful traditional antimicrobial and skin-purifying botanical",
+      "Soothes persistent skin concerns, eczema, and psoriasis symptoms",
+      "Natural organic bioprotectant and scalp care active"
+    ],
+    "applications": [
+      "Therapeutic Skincare",
+      "Dandruff & Scalp Treatments",
+      "Veterinary & Pet Care",
+      "Organic Bioprotectants"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Brownish-green to dark amber viscous oil"
+      },
+      {
+        "label": "Azadirachtin Content",
+        "value": "≥ 2000 ppm"
+      },
+      {
+        "label": "Acid Value",
+        "value": "≤ 15.0 mg KOH/g"
+      }
+    ],
+    "packaging": "25 kg / 190 kg drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "olive-oil",
+    "name": "Olive Oil",
+    "botanical": "Olea europaea",
+    "category": "essential-oils",
+    "tagline": "Extra virgin and refined cold-pressed Olive Oil rich in squalene and oleic acid",
+    "image": "/products/olive-oil.jpg",
+    "standardization": "Oleic Acid ≥ 70% / Extra Virgin",
+    "partUsed": "Fruit Pulp",
+    "origin": "Spain / India",
+    "benefits": [
+      "Deeply moisturizes and reinforces skin lipid barrier",
+      "Natural squalene and polyphenol protective antioxidant complex",
+      "Versatile, biocompatible carrier base for botanical actives"
+    ],
+    "applications": [
+      "Cosmetic & Emollient Bases",
+      "Nutraceutical Softgels",
+      "Herbal Maceration",
+      "Body & Hair Care"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Golden green to clear light yellow liquid"
+      },
+      {
+        "label": "Oleic Acid Content",
+        "value": "≥ 70.0%"
+      },
+      {
+        "label": "Acid Value",
+        "value": "≤ 1.5 mg KOH/g"
+      }
+    ],
+    "packaging": "25 kg / 190 kg drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "peppermint-oil",
+    "name": "Peppermint Oil",
+    "botanical": "Mentha piperita",
+    "category": "essential-oils",
+    "tagline": "High-grade pure Peppermint Oil standardized for natural menthol and menthone",
+    "image": "/products/peppermint-oil.jpg",
+    "standardization": "Total Menthol ≥ 50% / Menthone ≥ 20%",
+    "partUsed": "Aerial Parts",
+    "origin": "India",
+    "benefits": [
+      "Provides an intense, cooling and refreshing sensation",
+      "Supports gastrointestinal comfort and digestive ease",
+      "Promotes clear nasal breathing and mental clarity"
+    ],
+    "applications": [
+      "Oral Hygiene & Toothpastes",
+      "Digestive Health",
+      "Cooling Balms & Topicals",
+      "Confectionery & Flavors"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale yellow clear liquid"
+      },
+      {
+        "label": "Menthol Content",
+        "value": "≥ 50.0%"
+      },
+      {
+        "label": "Specific Gravity",
+        "value": "0.896 - 0.908"
+      }
+    ],
+    "packaging": "25 kg / 180 kg drum",
+    "shelfLife": "36 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "rosemary-oil",
+    "name": "Rosemary Oil",
+    "botanical": "Rosmarinus officinalis",
+    "category": "essential-oils",
+    "tagline": "Steam-distilled pure Rosemary Oil standardized for 1,8-cineole and camphor",
+    "image": "/products/rosemary-oil.jpg",
+    "standardization": "1,8-Cineole ≥ 42% / Camphor ≥ 10%",
+    "partUsed": "Leaves & Twigs",
+    "origin": "India / Spain",
+    "benefits": [
+      "Clinically popular for stimulating scalp and hair follicle vitality",
+      "Enhances cognitive focus, memory clarity, and alertness",
+      "Contains natural carnosic acid antioxidant fractions"
+    ],
+    "applications": [
+      "Haircare & Scalp Serums",
+      "Cognitive Wellness Blends",
+      "Aromatherapy",
+      "Antioxidant Preservation"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Clear, colorless to pale yellow liquid"
+      },
+      {
+        "label": "1,8-Cineole",
+        "value": "≥ 42.0%"
+      },
+      {
+        "label": "Refractive Index",
+        "value": "1.466 - 1.472"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "sesame-oil",
+    "name": "Sesame Oil",
+    "botanical": "Sesamum indicum",
+    "category": "essential-oils",
+    "tagline": "Cold-pressed natural Sesame Oil enriched with sesamin and sesamolin lignans",
+    "image": "/products/sesame-oil.jpg",
+    "standardization": "Sesamin & Sesamolin ≥ 0.5%",
+    "partUsed": "Seed",
+    "origin": "India",
+    "benefits": [
+      "High stability with natural antioxidant lignans",
+      "Nourishes skin barrier and improves elasticity",
+      "Traditional Ayurvedic base oil for revitalizing blends"
+    ],
+    "applications": [
+      "Cosmetics",
+      "Ayurvedic Preparations",
+      "Nutraceuticals",
+      "Topical Formulations"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Light yellow clear oily liquid"
+      },
+      {
+        "label": "Acid Value",
+        "value": "≤ 2.0 mg KOH/g"
+      },
+      {
+        "label": "Refractive Index",
+        "value": "1.465 - 1.469"
+      }
+    ],
+    "packaging": "25 kg / 190 kg drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "sweet-almond-oil",
+    "name": "Sweet Almond Oil",
+    "botanical": "Prunus amygdalus dulcis",
+    "category": "essential-oils",
+    "tagline": "Cold-pressed Sweet Almond Oil rich in oleic acid and vitamin E for skin and hair nutrition",
+    "image": "/products/sweet-almond-oil.jpg",
+    "standardization": "Oleic Acid ≥ 60% / Cold Pressed",
+    "partUsed": "Kernel / Seed",
+    "origin": "India",
+    "benefits": [
+      "Deeply hydrates and nourishes sensitive skin",
+      "Rich in natural vitamin E and essential fatty acids",
+      "Acts as an excellent emollient and carrier oil"
+    ],
+    "applications": [
+      "Cosmetics & Skincare",
+      "Hair Care",
+      "Massage & Aromatherapy",
+      "Personal Care"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Clear, pale yellow liquid"
+      },
+      {
+        "label": "Oleic Acid Content",
+        "value": "≥ 60.0%"
+      },
+      {
+        "label": "Acid Value",
+        "value": "≤ 2.0 mg KOH/g"
+      }
+    ],
+    "packaging": "25 kg / 190 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "tea-tree-oil",
+    "name": "Tea Tree Oil",
+    "botanical": "Melaleuca alternifolia",
+    "category": "essential-oils",
+    "tagline": "Pure therapeutic Australian Tea Tree Oil standardized for terpinen-4-ol",
+    "image": "/products/tea-tree-oil.jpg",
+    "standardization": "Terpinen-4-ol ≥ 38% / Cineole ≤ 5%",
+    "partUsed": "Leaves & Twigs",
+    "origin": "Australia / India",
+    "benefits": [
+      "Gold-standard botanical antimicrobial for blemishes and acne",
+      "Purifies skin and helps clear scalp dandruff",
+      "Broad-spectrum antibacterial and antifungal activity"
+    ],
+    "applications": [
+      "Acne & Dermal Formulations",
+      "Anti-dandruff Haircare",
+      "Antiseptic Washes",
+      "Personal Hygiene"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale yellow clear liquid"
+      },
+      {
+        "label": "Terpinen-4-ol",
+        "value": "≥ 38.0%"
+      },
+      {
+        "label": "1,8-Cineole",
+        "value": "≤ 5.0%"
+      }
+    ],
+    "packaging": "25 kg / 185 kg drum",
+    "shelfLife": "36 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+  {
+    "slug": "wintergreen-oil",
+    "name": "Wintergreen Oil",
+    "botanical": "Gaultheria procumbens",
+    "category": "essential-oils",
+    "tagline": "Natural steam-distilled Wintergreen Oil standardized for natural methyl salicylate",
+    "image": "/products/wintergreen-oil.jpg",
+    "standardization": "Natural Methyl Salicylate ≥ 98%",
+    "partUsed": "Leaves",
+    "origin": "India / Nepal",
+    "benefits": [
+      "Natural botanical methyl salicylate for intense muscle and joint relief",
+      "Warming, penetrating sensation for topical pain relief rubs",
+      "Crisp, sweet wintery mint aroma"
+    ],
+    "applications": [
+      "Topical Analgesic Balms & Sprays",
+      "Sports Massage Oils",
+      "Therapeutic Ointments",
+      "Aromatic Rubs"
+    ],
+    "composition": [],
+    "specs": [
+      {
+        "label": "Appearance",
+        "value": "Colorless to pale pink/yellow liquid"
+      },
+      {
+        "label": "Methyl Salicylate",
+        "value": "≥ 98.0%"
+      },
+      {
+        "label": "Refractive Index",
+        "value": "1.535 - 1.538"
+      }
+    ],
+    "packaging": "25 kg HDPE drum",
+    "shelfLife": "24 months",
+    "certifications": [
+      "ISO 22000",
+      "GMP"
+    ]
+  },
+
   {
     "slug": "green-tea-extract",
     "name": "Green Tea Extract",

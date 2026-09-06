@@ -46,6 +46,7 @@ export const Route = createFileRoute("/products/")({
 const SUPER_CATEGORIES = [
   { id: "all", label: "All Products" },
   { id: "herbal-extracts", label: "Herbal Extracts" },
+  { id: "essential-oils", label: "Essential Oils" },
   { id: "vitamins-minerals", label: "Vitamins, Minerals & Excipients" },
 ] as const;
 
@@ -64,13 +65,16 @@ const categoryImages: Record<ProductCategory, string> = {
   "carotenoids": catPhytoImg,
 };
 
-function getSuperCategory(category: string): "herbal-extracts" | "vitamins-minerals" {
+function getSuperCategory(category: string): "herbal-extracts" | "essential-oils" | "vitamins-minerals" {
   if (
     category === "natural-vitamins" ||
     category === "natural-minerals" ||
     category === "custom-formulations"
   ) {
     return "vitamins-minerals";
+  }
+  if (category === "essential-oils") {
+    return "essential-oils";
   }
   return "herbal-extracts";
 }
@@ -88,6 +92,9 @@ function ProductsPage() {
     ) {
       return "vitamins-minerals";
     }
+    if (search.tab === "essential-oils" || search.category === "essential-oils") {
+      return "essential-oils";
+    }
     if (search.tab === "herbal-extracts" || search.category === "herbal-extracts") {
       return "herbal-extracts";
     }
@@ -103,11 +110,13 @@ function ProductsPage() {
       search.category === "natural-minerals" ||
       search.category === "custom-formulations"
         ? "vitamins-minerals"
-        : search.tab === "herbal-extracts" || search.category === "herbal-extracts"
-          ? "herbal-extracts"
-          : search.tab === "all"
-            ? "all"
-            : undefined;
+        : search.tab === "essential-oils" || search.category === "essential-oils"
+          ? "essential-oils"
+          : search.tab === "herbal-extracts" || search.category === "herbal-extracts"
+            ? "herbal-extracts"
+            : search.tab === "all"
+              ? "all"
+              : undefined;
 
     if (requestedTab) {
       setActiveTab(requestedTab);
@@ -207,6 +216,8 @@ function ProductsPage() {
                   setActiveTab("vitamins-minerals");
                 } else if (cat.id === "herbal-extracts") {
                   setActiveTab("herbal-extracts");
+                } else if (cat.id === "essential-oils") {
+                  setActiveTab("essential-oils");
                 } else {
                   setActiveTab("all");
                 }
