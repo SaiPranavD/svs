@@ -14,8 +14,9 @@ import {
   PackageCheck,
   Layers,
   Dna,
+  Award,
 } from "lucide-react";
-import heroBannerImg from "@/assets/hero-banner.png";
+import heroArtworkImg from "@/assets/hero-artwork.png";
 import labImg from "@/assets/research-lab.jpg";
 
 export const Route = createFileRoute("/")({
@@ -69,20 +70,149 @@ function Home() {
 
   return (
     <>
-      {/* 1. STARTING PAGE HERO BANNER */}
-      <section className="relative w-full bg-white overflow-hidden border-b border-border/40">
-        <div className="w-full max-w-[1720px] mx-auto">
-          <img
-            src={heroBannerImg}
-            alt="SVS Nutraceuticals — Your Trusted Trading Partner for Nutraceutical Ingredients"
-            className="w-full h-auto block object-contain"
-            loading="eager"
-            fetchPriority="high"
-          />
+      {/* 1. STARTING PAGE HERO BANNER - INTERACTIVE & FULL CLARITY */}
+      <section className="relative w-full bg-gradient-to-b from-[#FAFBF9] to-white border-b border-border/50 overflow-hidden">
+        <div className="container-editorial">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[520px] lg:min-h-[560px] py-8 lg:py-12">
+            {/* Left Content Column: 100% Vector Crispness, Official Logo & Interactive Badges */}
+            <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+              {/* SVS Official Company Logo & Tagline */}
+              <div className="flex items-center gap-3.5 sm:gap-4">
+                <img
+                  src="/logo-mark.png"
+                  alt="SVS Logo"
+                  className="h-14 w-14 sm:h-16 sm:w-16 object-contain drop-shadow-sm shrink-0"
+                />
+                <div className="flex flex-col">
+                  <span className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-forest-deep leading-none">
+                    SVS
+                  </span>
+                  <span className="text-[0.68rem] sm:text-xs font-bold tracking-[0.32em] text-forest-deep mt-1 leading-none">
+                    NUTRACEUTICALS
+                  </span>
+                  <div className="flex items-center gap-2 mt-1.5">
+                    <span className="h-[1px] w-6 bg-forest/40" />
+                    <span className="text-[0.58rem] sm:text-[0.66rem] font-semibold tracking-[0.24em] text-forest uppercase leading-none">
+                      INNOVATING HEALTH &amp; WELLNESS
+                    </span>
+                    <span className="h-[1px] w-6 bg-forest/40" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Main Headline */}
+              <div>
+                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] xl:text-[3rem] font-semibold leading-[1.18] tracking-tight text-forest-deep">
+                  Your Trusted Trading Partner for <br />
+                  <span className="text-[#1E5631] font-bold">Nutraceutical Ingredients</span>
+                </h1>
+              </div>
+
+              {/* Interactive Category Filter Pills */}
+              <div className="flex flex-wrap items-center gap-2 pt-0.5">
+                {[
+                  { label: "Vitamins", search: { category: "natural-vitamins", tab: "vitamins-minerals" }, hash: "natural-vitamins" },
+                  { label: "Minerals", search: { category: "natural-minerals", tab: "vitamins-minerals" }, hash: "natural-minerals" },
+                  { label: "Botanical Extracts", search: { category: "herbal-extracts", tab: "herbal-extracts" }, hash: "herbal-extracts" },
+                  { label: "Amino Acids", search: { category: "signature-products" }, hash: "signature-products" },
+                  { label: "Speciality Ingredients", search: { category: "custom-formulations", tab: "vitamins-minerals" }, hash: "custom-formulations" },
+                  { label: "Essential Oils", search: { category: "essential-oils" }, hash: "essential-oils" },
+                ].map((cat) => (
+                  <Link
+                    key={cat.label}
+                    to="/products"
+                    search={cat.search}
+                    hash={cat.hash}
+                    className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium text-forest-deep bg-sage-soft/35 hover:bg-forest hover:text-white border border-forest/20 hover:border-forest transition-all duration-200 cursor-pointer shadow-2xs hover:shadow-xs"
+                  >
+                    <span>{cat.label}</span>
+                  </Link>
+                ))}
+              </div>
+
+              {/* 4 Interactive Feature Cards */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                {[
+                  {
+                    icon: Leaf,
+                    title: "High Quality",
+                    subtitle: "Raw Materials",
+                  },
+                  {
+                    icon: ShieldCheck,
+                    title: "Reliable",
+                    subtitle: "Supply Chain",
+                  },
+                  {
+                    icon: HeartHandshake,
+                    title: "Global",
+                    subtitle: "Partnerships",
+                  },
+                  {
+                    icon: Award,
+                    title: "Compliance &",
+                    subtitle: "Quality Assurance",
+                  },
+                ].map((badge, idx) => {
+                  const Icon = badge.icon;
+                  return (
+                    <div
+                      key={idx}
+                      className="group flex flex-col items-center text-center p-3 rounded-xl border border-border/80 bg-white/90 hover:bg-white hover:border-forest/50 hover:shadow-md transition-all duration-300 cursor-default"
+                    >
+                      <div className="h-11 w-11 rounded-full border border-forest/25 bg-sage-soft/25 flex items-center justify-center text-forest mb-2 group-hover:bg-forest group-hover:text-white group-hover:scale-105 transition-all duration-300">
+                        <Icon className="h-5 w-5 stroke-[1.85]" />
+                      </div>
+                      <span className="text-[0.72rem] sm:text-[0.76rem] font-bold text-forest-deep leading-tight group-hover:text-forest transition-colors">
+                        {badge.title} <br />
+                        <span className="font-medium text-muted-foreground">{badge.subtitle}</span>
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <Link
+                  to="/products"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-forest px-6 py-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-forest-deep hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                >
+                  <span>Explore Ingredients</span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-2 rounded-full border border-forest/30 bg-white/90 hover:bg-sage-soft/40 px-5 py-3 text-xs sm:text-sm font-semibold text-forest-deep transition-all duration-300 cursor-pointer"
+                >
+                  <span>About SVS Nutraceuticals</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Visual Column: High-Res Artwork */}
+            <div className="lg:col-span-5 relative flex items-center justify-center">
+              <div className="relative w-full max-w-lg lg:max-w-none overflow-hidden rounded-2xl border border-border/60 shadow-xl bg-white group">
+                <img
+                  src={heroArtworkImg}
+                  alt="SVS Nutraceuticals — Global Supply for a Healthier Tomorrow"
+                  className="w-full h-auto object-cover block group-hover:scale-[1.02] transition-transform duration-700"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+                <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-xs border border-forest/20 rounded-full py-1.5 px-3.5 shadow-sm flex items-center gap-1.5">
+                  <Leaf className="h-3.5 w-3.5 text-forest" />
+                  <span className="font-display italic text-xs text-forest-deep font-semibold">
+                    Global Supply for a Healthier Tomorrow
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Ticker Bar Across Full Width */}
-        <div className="relative z-10 w-full bg-forest-deep text-white py-3 sm:py-3.5 px-4 border-t border-amber-400/25 shadow-md">
+        <div className="relative z-10 w-full bg-forest-deep text-white py-3.5 px-4 border-t border-amber-400/25 shadow-md">
           <div className="container-editorial flex flex-wrap items-center justify-center lg:justify-between gap-4">
             <div className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-7 gap-y-2 text-[0.68rem] sm:text-xs font-semibold tracking-widest uppercase">
               {[
