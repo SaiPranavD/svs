@@ -57,7 +57,8 @@ export function SiteFooter() {
             <li className="text-[0.75rem] text-cream/50 mt-4 leading-relaxed">
               FSSAI No: 13626999000489<br />
               GST No: 36CEXPD2886J2ZQ<br />
-              TIN TR: 4095-297-0006
+              TIN TR: 4095-297-0006<br />
+              IEC: CEXPD2886J
             </li>
           </ul>
         </div>

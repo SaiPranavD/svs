@@ -223,13 +223,17 @@ function Home() {
       </section>
 
       {/* 2. ABOUT US SECTION */}
-      <section id="about-us" className="py-24 bg-card border-b border-border/40 scroll-mt-20">
-        <div className="container-editorial reveal">
+      <section id="about-us" className="py-24 bg-[#FAF8F5] border-b border-border/60 scroll-mt-20 relative overflow-hidden">
+        {/* Soft background ambient glow */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sage-soft/30 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#C59B4E]/5 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="container-editorial relative z-10 reveal">
           <div className="grid gap-12 lg:grid-cols-12 items-center">
             {/* Left Column: Narrative Copy */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <p className="eyebrow">ABOUT US</p>
+                <p className="eyebrow text-forest">ABOUT US</p>
                 <h2 className="mt-3 font-display text-3xl sm:text-4xl md:text-5xl text-forest-deep font-semibold leading-tight">
                   Welcome to <br />
                   <span className="text-forest italic font-normal">SVS Nutraceuticals</span>
@@ -255,7 +259,7 @@ function Home() {
               </div>
 
               <div className="pt-2">
-                <div className="rounded-lg border-l-4 border-forest bg-sage-soft/30 p-5">
+                <div className="rounded-xl border-l-4 border-forest bg-sage-soft/40 p-5 shadow-xs">
                   <p className="font-display text-forest-deep italic text-base sm:text-lg">
                     “Building long-term business relationships based on quality, trust, reliability, and customer satisfaction.”
                   </p>
@@ -283,16 +287,16 @@ function Home() {
 
             {/* Right Column: Visual and Pillar Highlights */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="relative rounded-xl overflow-hidden border border-border/70 shadow-md bg-bone">
+              <div className="relative rounded-2xl overflow-hidden border border-border/80 shadow-lg bg-bone group">
                 <img
                   src={labImg}
                   alt="SVS Research & Sourcing Standards"
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/85 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-forest-deep/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="text-xs uppercase tracking-wider font-semibold text-sage">Quality &amp; Compliance</span>
-                  <p className="text-sm font-medium mt-0.5 text-white/95">
+                  <span className="text-xs uppercase tracking-wider font-semibold text-[#E8C77B]">Quality &amp; Compliance</span>
+                  <p className="text-sm font-medium mt-1 text-white/95 leading-snug">
                     FSSAI Registered • Strict Analytical Standards • Reliable Supply Chain
                   </p>
                 </div>
@@ -325,10 +329,10 @@ function Home() {
                   return (
                     <div
                       key={idx}
-                      className="rounded-lg border border-border bg-card p-4 hover:border-forest/40 hover:shadow-sm transition-all"
+                      className="rounded-xl border border-border/80 bg-white p-4.5 hover:border-forest/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                     >
-                      <div className="h-8 w-8 rounded-md bg-sage-soft/50 text-forest flex items-center justify-center mb-2.5">
-                        <Icon className="h-4 w-4" />
+                      <div className="h-9 w-9 rounded-lg bg-forest/10 text-forest flex items-center justify-center mb-2.5">
+                        <Icon className="h-4.5 w-4.5" />
                       </div>
                       <h3 className="font-display text-sm font-semibold text-forest-deep">
                         {item.title}
@@ -346,49 +350,56 @@ function Home() {
       </section>
 
       {/* 3. OUR VISION & OUR MISSION SECTION */}
-      <section className="py-24 bg-bone border-b border-border/40">
+      <section className="py-24 bg-[#F4F1EA] border-b border-border/60">
         <div className="container-editorial reveal">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="eyebrow">Guiding Principles</p>
-            <h2 className="mt-3 font-display text-3xl sm:text-4xl text-forest-deep font-semibold">
+            <p className="eyebrow text-forest font-semibold tracking-[0.2em]">
+              Guiding Principles
+            </p>
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep font-semibold tracking-tight">
               Our Vision &amp; Mission
             </h2>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
               Anchored in integrity, quality sourcing, and long-term customer partnerships.
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-12 items-stretch">
-            {/* OUR VISION CARD */}
-            <div className="lg:col-span-5 rounded-2xl border border-forest/20 bg-forest-deep p-8 sm:p-10 text-white flex flex-col justify-between shadow-lg relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-forest/10 rounded-full blur-3xl pointer-events-none" />
+            {/* OUR VISION CARD - Solid Deep Emerald Box */}
+            <div className="lg:col-span-5 rounded-2xl bg-[#0e2a1e] border border-[#1a4231] p-8 sm:p-10 text-white flex flex-col justify-between shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-[#C59B4E] via-forest to-transparent rounded-full" />
 
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-sage mb-6">
-                  <Compass className="h-3.5 w-3.5" />
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#E8C77B] border border-white/15 mb-6">
+                  <Compass className="h-4 w-4 text-[#C59B4E]" />
                   OUR VISION
                 </div>
 
-                <h3 className="font-display text-2xl sm:text-3xl text-white font-semibold leading-snug">
+                <h3 className="font-display text-2xl sm:text-3xl text-white font-medium leading-snug mt-2">
                   To become a trusted and preferred partner for nutraceutical ingredients by delivering reliable sourcing solutions and supporting the growth of health and wellness businesses.
                 </h3>
               </div>
 
-              <div className="mt-10 pt-6 border-t border-white/15 flex items-center justify-between text-xs text-cream/75">
-                <span>Core Purpose</span>
-                <span className="font-semibold text-sage">Reliability • Growth • Trust</span>
+              <div className="mt-10 pt-6 border-t border-white/15 flex items-center justify-between text-xs text-cream/80">
+                <span className="uppercase tracking-wider font-mono text-[0.7rem] text-cream/60">Core Purpose</span>
+                <span className="font-medium text-[#E8C77B] flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[#C59B4E]" />
+                  Reliability • Growth • Trust
+                </span>
               </div>
             </div>
 
-            {/* OUR MISSION CARD */}
-            <div className="lg:col-span-7 rounded-2xl border border-border bg-card p-8 sm:p-10 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+            {/* OUR MISSION CARD - Solid White High-End Box */}
+            <div className="lg:col-span-7 rounded-2xl bg-white border border-border/80 p-8 sm:p-10 text-forest-deep flex flex-col justify-between shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-forest via-sage to-transparent rounded-full" />
+
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-sage-soft/40 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-forest mb-6">
-                  <Target className="h-3.5 w-3.5" />
+                <div className="inline-flex items-center gap-2 rounded-full bg-sage-soft/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-forest border border-forest/20 mb-6">
+                  <Target className="h-4 w-4 text-forest" />
                   OUR MISSION
                 </div>
 
-                <ul className="space-y-4">
+                <ul className="space-y-3.5 mt-2">
                   {[
                     "To supply quality-focused nutraceutical ingredients.",
                     "To provide reliable and efficient sourcing solutions.",
@@ -398,12 +409,12 @@ function Home() {
                   ].map((point, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3.5 p-3 rounded-lg hover:bg-bone/80 transition-colors"
+                      className="flex items-start gap-3.5 p-3.5 rounded-xl bg-[#FAF9F5] border border-border/60 hover:border-forest/40 hover:bg-[#F3EFE6] transition-all duration-200"
                     >
-                      <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
-                        <CheckCircle2 className="h-4 w-4" />
+                      <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest text-white shadow-xs">
+                        <CheckCircle2 className="h-3.5 w-3.5" />
                       </div>
-                      <span className="text-base font-medium text-forest-deep leading-relaxed">
+                      <span className="text-sm sm:text-base font-medium text-forest-deep leading-relaxed">
                         {point}
                       </span>
                     </li>
@@ -412,14 +423,15 @@ function Home() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-muted-foreground font-medium">
                   Partner with SVS for consistent quality &amp; supply solutions.
                 </p>
                 <Link
                   to="/products"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-forest hover:text-forest-deep"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-forest hover:text-forest-deep transition-colors group"
                 >
-                  Browse Product Catalog <ArrowRight className="h-3.5 w-3.5" />
+                  Browse Product Catalog
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
