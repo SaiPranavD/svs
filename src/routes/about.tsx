@@ -123,7 +123,7 @@ function About() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {[
-            ["Legal Registrations", "Certifications & Compliance", "FSSAI Lic No: 13626999000489\nGST No: 36CEXPD2886J2ZQ"],
+            ["Legal Registrations", "Certifications & Compliance", "FSSAI Lic No: 13626999000489\nGST No: 36CEXPD2886J2ZQ\nTIN TR: 4095-297-0006"],
             ["Registered Office", "Corporate Address", "2-6-314, JAIPURI COLONY,\nBANDLAGUDA, CIRCLE 10,\nCIRCLE 10, HYDERABAD"],
           ].map(([city, dept, addr]) => (
             <div key={city} className="rounded-sm border border-border bg-card p-6 flex flex-col justify-between">
