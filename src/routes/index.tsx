@@ -197,20 +197,26 @@ function Home() {
         <div className="relative z-10 w-full bg-forest-deep text-white py-3 px-4 border-t border-amber-400/25 shadow-md">
           <div className="container-editorial flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 gap-y-2 text-[0.68rem] sm:text-xs font-semibold tracking-widest uppercase">
             {[
-              "NUTRACEUTICALS",
-              "VITAMINS",
-              "HERBAL EXTRACTS",
-              "AMINO ACIDS",
-              "MINERALS",
-              "SPECIALTY INGREDIENTS",
-            ].map((cat, idx, arr) => (
-              <div key={cat} className="flex items-center gap-2 text-cream/90 hover:text-white transition-colors">
+              { label: "NUTRACEUTICALS", search: undefined, hash: undefined },
+              { label: "VITAMINS", search: { category: "natural-vitamins", tab: "vitamins-minerals" }, hash: "natural-vitamins" },
+              { label: "HERBAL EXTRACTS", search: { category: "herbal-extracts", tab: "herbal-extracts" }, hash: "herbal-extracts" },
+              { label: "AMINO ACIDS", search: { category: "signature-products" }, hash: "signature-products" },
+              { label: "MINERALS", search: { category: "natural-minerals", tab: "vitamins-minerals" }, hash: "natural-minerals" },
+              { label: "SPECIALTY INGREDIENTS", search: { category: "custom-formulations", tab: "vitamins-minerals" }, hash: "custom-formulations" },
+            ].map((item, idx, arr) => (
+              <Link
+                key={item.label}
+                to="/products"
+                search={item.search}
+                hash={item.hash}
+                className="flex items-center gap-2 text-cream/90 hover:text-white transition-colors cursor-pointer"
+              >
                 <Leaf className="h-3.5 w-3.5 text-[#C59B4E] shrink-0" />
-                <span>{cat}</span>
+                <span>{item.label}</span>
                 {idx < arr.length - 1 && (
                   <span className="text-white/25 ml-4 hidden md:inline">|</span>
                 )}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -442,42 +448,48 @@ function Home() {
                 desc: "Standardized herbal extracts manufactured with verified active assay potency for capsules, tablets, and functional blends.",
                 category: "Herbal Extracts",
                 icon: Leaf,
-                link: "/products",
+                search: { category: "herbal-extracts", tab: "herbal-extracts" },
+                hash: "herbal-extracts",
               },
               {
                 title: "Vitamins & Minerals",
                 desc: "Plant-derived and pharmaceutical grade vitamins, organic minerals, and bioavailable nutrient complexes.",
                 category: "Natural Vitamins & Minerals",
                 icon: FlaskConical,
-                link: "/products",
+                search: { category: "vitamins-minerals", tab: "vitamins-minerals" },
+                hash: "vitamins-minerals",
               },
               {
                 title: "Amino Acids & Specialty Actives",
                 desc: "High-purity amino acids, peptides, and functional compounds tailored for sports nutrition, active wellness, and recovery formulas.",
                 category: "Specialty Actives",
                 icon: Sparkles,
-                link: "/products",
+                search: { category: "signature-products" },
+                hash: "signature-products",
               },
               {
                 title: "Phytochemicals & Carotenoids",
                 desc: "Pure isolated phytochemical compounds, carotenoids, and potent natural antioxidants meeting stringent pharmacopoeial specs.",
                 category: "Phytochemicals",
                 icon: Dna,
-                link: "/products",
+                search: { category: "phytochemicals" },
+                hash: "phytochemicals",
               },
               {
                 title: "Essential Oils & Aromatics",
                 desc: "Therapeutic-grade essential oils and natural aromatics steam-distilled to preserve delicate botanical profiles.",
                 category: "Essential Oils",
                 icon: PackageCheck,
-                link: "/products",
+                search: { category: "essential-oils" },
+                hash: "essential-oils",
               },
               {
                 title: "Specialty Functional Ingredients",
                 desc: "Custom formulation ingredients, probiotics, excipients, and specialty raw materials for targeted market formulations.",
                 category: "Custom Solutions",
                 icon: Layers,
-                link: "/products",
+                search: { category: "custom-formulations", tab: "vitamins-minerals" },
+                hash: "custom-formulations",
               },
             ].map((prod, idx) => {
               const Icon = prod.icon;
@@ -496,9 +508,16 @@ function Home() {
                       </span>
                     </div>
 
-                    <h3 className="font-display text-xl font-semibold text-forest-deep group-hover:text-forest transition-colors">
-                      {prod.title}
-                    </h3>
+                    <Link
+                      to="/products"
+                      search={prod.search}
+                      hash={prod.hash}
+                      className="block group-hover:text-forest transition-colors"
+                    >
+                      <h3 className="font-display text-xl font-semibold text-forest-deep group-hover:text-forest transition-colors">
+                        {prod.title}
+                      </h3>
+                    </Link>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                       {prod.desc}
                     </p>
@@ -506,7 +525,9 @@ function Home() {
 
                   <div className="mt-6 pt-5 border-t border-border/70 flex items-center justify-between">
                     <Link
-                      to={prod.link}
+                      to="/products"
+                      search={prod.search}
+                      hash={prod.hash}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-forest hover:text-forest-deep transition-colors"
                     >
                       View Ingredients <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
