@@ -1,46 +1,44 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   ArrowRight,
   Leaf,
   FlaskConical,
   ShieldCheck,
   CheckCircle2,
-  ChevronDown,
   Sparkles,
   Target,
   Compass,
-  Building2,
   Truck,
   HeartHandshake,
   PackageCheck,
   Layers,
   Dna,
+  FileCheck2,
+  Users,
 } from "lucide-react";
-import heroImg from "@/assets/hero-botanical.jpg";
+import heroBannerImg from "@/assets/hero-nutraceutical-banner.jpg";
 import labImg from "@/assets/research-lab.jpg";
-import farmImg from "@/assets/sustainability-farm.jpg";
-import { RequestQuoteDialog } from "@/components/request-quote-dialog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "SVS Nutraceuticals — Your Trusted Partner for Nutraceutical Ingredients",
+        title: "SVS Nutraceuticals — Quality Ingredients. Better Solutions. Stronger Partnerships.",
       },
       {
         name: "description",
         content:
-          "SVS Nutraceuticals is a trusted supplier and sourcing partner for high-quality nutraceutical raw materials, vitamins, herbal and botanical extracts, amino acids, minerals, and specialty ingredients.",
+          "Your trusted partner for Nutraceutical Ingredients, Vitamins, Herbal Extracts, Amino Acids, Minerals and Specialty Ingredients.",
       },
       {
         property: "og:title",
-        content: "SVS Nutraceuticals — Your Trusted Partner for Nutraceutical Ingredients",
+        content: "SVS Nutraceuticals — Quality Ingredients. Better Solutions. Stronger Partnerships.",
       },
       {
         property: "og:description",
         content:
-          "Trusted supplier of nutraceutical raw materials, vitamins, herbal extracts, amino acids, minerals, and specialty ingredients.",
+          "Your trusted partner for Nutraceutical Ingredients, Vitamins, Herbal Extracts, Amino Acids, Minerals and Specialty Ingredients.",
       },
     ],
   }),
@@ -48,9 +46,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const [quoteOpen, setQuoteOpen] = useState(false);
-  const [quoteCategory, setQuoteCategory] = useState("");
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -74,92 +69,154 @@ function Home() {
     };
   }, []);
 
-  const openQuote = (categoryName?: string) => {
-    setQuoteCategory(categoryName || "");
-    setQuoteOpen(true);
-  };
-
   return (
     <>
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-forest-deep py-28 md:py-36">
-        {/* Background Image of Green Botanical Field with Refined Overlay */}
+      {/* 1. STARTING PAGE HERO SECTION */}
+      <section className="relative min-h-[90vh] lg:min-h-[92vh] flex flex-col justify-between overflow-hidden bg-[#FBF9F5]">
+        {/* Photographic Background with Botanical Composition on Right & Marble on Left */}
         <div className="absolute inset-0 z-0">
           <img
-            src={farmImg}
-            alt="Botanical Fields"
-            className="h-full w-full object-cover opacity-85"
+            src={heroBannerImg}
+            alt="SVS Botanical & Laboratory Ingredients"
+            className="h-full w-full object-cover object-right lg:object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-forest-deep/80 to-forest-deep/95" />
+          {/* Subtle gradient wash on left side to ensure high contrast and crisp typography */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FBF9F5] via-[#FBF9F5]/92 to-transparent lg:w-[62%]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FBF9F5]/80 via-transparent to-transparent lg:hidden" />
         </div>
 
-        <div className="container-editorial relative z-10 flex flex-col items-center justify-center text-center reveal px-4">
-          {/* Eyebrow Pill */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cream backdrop-blur-md mb-6">
-            <span className="h-1.5 w-1.5 rounded-full bg-sage animate-ping" />
-            SVS Nutraceuticals
+        {/* Top Right Floating Ribbon Badge: QUALITY • PURITY • TRUST */}
+        <div className="hidden lg:flex flex-col items-center justify-center absolute top-0 right-10 xl:right-16 w-24 pt-7 pb-5 bg-forest-deep text-white shadow-2xl rounded-b-xl border-x border-b border-amber-400/40 z-20">
+          <div className="h-9 w-9 rounded-full border border-amber-400/60 flex items-center justify-center text-[#C59B4E] mb-2.5 bg-forest-deep/90 shadow-inner">
+            <Leaf className="h-4 w-4" />
           </div>
+          <span className="text-[0.62rem] font-bold tracking-[0.24em] text-cream leading-tight">QUALITY</span>
+          <span className="text-[0.62rem] font-bold tracking-[0.24em] text-cream leading-tight mt-0.5">PURITY</span>
+          <span className="text-[0.62rem] font-bold tracking-[0.24em] text-[#C59B4E] leading-tight mt-0.5">TRUST</span>
+        </div>
 
-          {/* Main Title */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.08] tracking-tight text-white font-semibold max-w-5xl">
-            Your Trusted Partner for <br className="hidden sm:inline" />
-            <span className="text-cream italic font-normal">Nutraceutical Ingredients</span>
-          </h1>
+        {/* Main Content Area */}
+        <div className="container-editorial relative z-10 pt-10 sm:pt-14 pb-12 lg:py-16 flex-1 flex flex-col justify-center">
+          <div className="max-w-2xl reveal">
+            {/* SVS Company Logo in Place of Logo */}
+            <div className="flex items-center gap-3.5 sm:gap-4 mb-6 sm:mb-8">
+              <img
+                src="/logo-mark.png"
+                alt="SVS Logo"
+                className="h-14 w-14 sm:h-18 sm:w-18 lg:h-20 lg:w-20 object-contain drop-shadow-sm shrink-0"
+              />
+              <div className="flex flex-col">
+                <span className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-forest-deep leading-none">
+                  SVS
+                </span>
+                <span className="text-[0.7rem] sm:text-xs font-bold tracking-[0.34em] text-forest-deep mt-1 leading-none">
+                  NUTRACEUTICALS
+                </span>
+                <div className="flex items-center gap-2 mt-1.5">
+                  <span className="h-[1px] w-5 bg-amber-500/60" />
+                  <span className="text-[0.6rem] sm:text-[0.68rem] font-semibold tracking-[0.24em] text-amber-800 uppercase leading-none">
+                    INNOVATING HEALTH &amp; WELLNESS
+                  </span>
+                  <span className="h-[1px] w-5 bg-amber-500/60" />
+                </div>
+              </div>
+            </div>
 
-          {/* Two Descriptive Paragraphs */}
-          <div className="mt-8 max-w-4xl space-y-4 text-base sm:text-lg md:text-xl leading-relaxed text-white/95 font-light px-2 sm:px-6">
-            <p>
-              SVS Nutraceuticals is a trusted supplier and sourcing partner for high-quality nutraceutical raw materials, vitamins, herbal and botanical extracts, amino acids, minerals, and specialty ingredients.
+            {/* Three-Line Headline */}
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-bold leading-[1.12] tracking-tight text-forest-deep">
+              QUALITY INGREDIENTS. <br />
+              <span className="text-[#B4833E]">BETTER SOLUTIONS.</span> <br />
+              STRONGER PARTNERSHIPS.
+            </h1>
+
+            {/* Subtitle */}
+            <p className="mt-5 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-foreground/85 font-normal">
+              Your trusted partner for Nutraceutical Ingredients, Vitamins, Herbal Extracts, Amino Acids, Minerals and Specialty Ingredients.
             </p>
-            <p className="text-white/85 text-sm sm:text-base md:text-lg">
-              We are committed to supporting nutraceutical manufacturers, dietary supplement brands, pharmaceutical companies, food and beverage manufacturers, and health &amp; wellness businesses with reliable ingredient sourcing and supply solutions.
-            </p>
-          </div>
 
-          {/* Value Highlights Pill */}
-          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-2 sm:gap-6 rounded-full border border-white/25 bg-white/15 px-6 py-2.5 text-xs sm:text-sm font-semibold tracking-wide text-white backdrop-blur-md shadow-sm">
-            <span className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-sage" /> Quality Ingredients
-            </span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span className="flex items-center gap-2">
-              <Truck className="h-4 w-4 text-sage" /> Reliable Supply
-            </span>
-            <span className="text-white/40 hidden sm:inline">•</span>
-            <span className="flex items-center gap-2">
-              <HeartHandshake className="h-4 w-4 text-sage" /> Strong Partnerships
-            </span>
-          </div>
+            {/* 4 Feature Badges (3rd 'Scientifically Sourced' removed as requested) */}
+            <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6 pt-2">
+              {[
+                {
+                  icon: Leaf,
+                  line1: "PREMIUM",
+                  line2: "QUALITY",
+                },
+                {
+                  icon: ShieldCheck,
+                  line1: "RELIABLE",
+                  line2: "SUPPLY",
+                },
+                {
+                  icon: FileCheck2,
+                  line1: "COMPLETE",
+                  line2: "DOCUMENTATION",
+                },
+                {
+                  icon: Users,
+                  line1: "CUSTOMER",
+                  line2: "FOCUSED",
+                },
+              ].map((badge, idx, arr) => {
+                const Icon = badge.icon;
+                return (
+                  <div key={idx} className="flex items-center gap-4 sm:gap-6">
+                    <div className="flex flex-col items-center text-center group">
+                      <div className="h-12 w-12 rounded-full border border-forest-deep/25 bg-white/95 shadow-xs flex items-center justify-center text-forest-deep mb-2 group-hover:border-forest group-hover:text-forest transition-colors">
+                        <Icon className="h-5 w-5 stroke-[1.75]" />
+                      </div>
+                      <span className="text-[0.65rem] sm:text-[0.7rem] font-bold uppercase tracking-wider text-forest-deep leading-tight">
+                        {badge.line1} <br />
+                        {badge.line2}
+                      </span>
+                    </div>
+                    {idx < arr.length - 1 && (
+                      <div className="h-10 w-[1px] bg-forest-deep/15 hidden sm:block" />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
 
-          {/* CTA Actions */}
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <Link
-              to="/products"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-full bg-forest px-8 py-3.5 text-base font-semibold text-white shadow-md transition-all duration-300 hover:bg-forest-deep hover:shadow-xl hover:-translate-y-0.5"
-            >
-              Explore Our Products
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <button
-              onClick={() => openQuote()}
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border-2 border-white bg-transparent px-8 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-white hover:text-forest-deep hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
-            >
-              Request a Quote
-            </button>
+            {/* Action Button: Explore Our Products */}
+            <div className="mt-9 flex flex-wrap items-center gap-4">
+              <Link
+                to="/products"
+                className="group inline-flex items-center gap-3 rounded-full bg-forest-deep py-1.5 pl-2 pr-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-forest hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-amber-400/40 bg-forest-deep text-[#C59B4E] group-hover:scale-105 transition-transform">
+                  <Leaf className="h-4 w-4" />
+                </span>
+                <span className="px-2 text-white">Explore Our Products</span>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-[#C59B4E] to-[#9C702E] text-white group-hover:translate-x-0.5 transition-transform">
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Bounce Scroll Indicator */}
-        <button
-          onClick={() => {
-            const nextSec = document.getElementById("about-us");
-            nextSec?.scrollIntoView({ behavior: "smooth" });
-          }}
-          className="absolute bottom-4 sm:bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/50 hover:text-white transition-colors animate-bounce z-10 cursor-pointer"
-          aria-label="Scroll to next section"
-        >
-          <ChevronDown className="h-7 w-7" />
-        </button>
+        {/* Bottom Ticker Bar Across Full Width */}
+        <div className="relative z-10 w-full bg-forest-deep text-white py-3.5 px-4 border-t border-amber-400/25 shadow-md">
+          <div className="container-editorial flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 gap-y-2 text-[0.68rem] sm:text-xs font-semibold tracking-widest uppercase">
+            {[
+              "NUTRACEUTICALS",
+              "VITAMINS",
+              "HERBAL EXTRACTS",
+              "AMINO ACIDS",
+              "MINERALS",
+              "SPECIALTY INGREDIENTS",
+            ].map((cat, idx, arr) => (
+              <div key={cat} className="flex items-center gap-2 text-cream/90 hover:text-white transition-colors">
+                <Leaf className="h-3.5 w-3.5 text-[#C59B4E] shrink-0" />
+                <span>{cat}</span>
+                {idx < arr.length - 1 && (
+                  <span className="text-white/25 ml-4 hidden md:inline">|</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* 2. ABOUT US SECTION */}
@@ -229,7 +286,7 @@ function Home() {
                   alt="SVS Research & Sourcing Standards"
                   className="w-full h-64 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/85 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-xs uppercase tracking-wider font-semibold text-sage">Quality &amp; Compliance</span>
                   <p className="text-sm font-medium mt-0.5 text-white/95">
@@ -355,12 +412,12 @@ function Home() {
                 <p className="text-xs text-muted-foreground">
                   Partner with SVS for consistent quality &amp; supply solutions.
                 </p>
-                <button
-                  onClick={() => openQuote()}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-forest hover:text-forest-deep cursor-pointer"
+                <Link
+                  to="/products"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-forest hover:text-forest-deep"
                 >
-                  Discuss Your Requirements <ArrowRight className="h-3.5 w-3.5" />
-                </button>
+                  Browse Product Catalog <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
               </div>
             </div>
           </div>
@@ -457,12 +514,6 @@ function Home() {
                     >
                       View Ingredients <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
                     </Link>
-                    <button
-                      onClick={() => openQuote(prod.title)}
-                      className="text-xs font-medium text-muted-foreground hover:text-forest-deep transition-colors cursor-pointer"
-                    >
-                      Get Quote
-                    </button>
                   </div>
                 </div>
               );
@@ -477,33 +528,20 @@ function Home() {
                 Looking for Specific Raw Materials or Custom Sourcing?
               </h3>
               <p className="text-sm sm:text-base text-white/85 leading-relaxed font-light max-w-2xl mx-auto">
-                Explore our comprehensive ingredient database with full technical specifications, or speak directly with our sourcing desk for commercial volume pricing.
+                Explore our comprehensive ingredient database with full technical specifications across 120+ standardized botanical extracts, vitamins, minerals, and functional nutrients.
               </p>
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="pt-2 flex items-center justify-center">
                 <Link
                   to="/products"
-                  className="w-full sm:w-auto rounded-full bg-forest px-8 py-3 text-sm font-semibold text-white shadow-md hover:bg-forest-deep hover:shadow-xl transition-all"
+                  className="rounded-full bg-forest px-8 py-3 text-sm font-semibold text-white shadow-md hover:bg-forest-deep hover:shadow-xl transition-all"
                 >
                   Explore Our Products
                 </Link>
-                <button
-                  onClick={() => openQuote()}
-                  className="w-full sm:w-auto rounded-full border-2 border-white bg-transparent px-8 py-3 text-sm font-semibold text-white hover:bg-white hover:text-forest-deep transition-all cursor-pointer"
-                >
-                  Request a Quote
-                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* REQUEST A QUOTE MODAL */}
-      <RequestQuoteDialog
-        open={quoteOpen}
-        onOpenChange={setQuoteOpen}
-        defaultIngredient={quoteCategory}
-      />
     </>
   );
 }
