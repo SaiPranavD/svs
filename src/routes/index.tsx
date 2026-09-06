@@ -18,7 +18,6 @@ import {
   Users,
 } from "lucide-react";
 import heroCleanBg from "@/assets/hero-clean-background.jpg";
-import heroImg from "@/assets/hero-botanical.jpg";
 import labImg from "@/assets/research-lab.jpg";
 
 export const Route = createFileRoute("/")({
@@ -351,70 +350,56 @@ function Home() {
       </section>
 
       {/* 3. OUR VISION & OUR MISSION SECTION */}
-      <section className="relative py-28 bg-[#091810] text-white border-y border-[#C59B4E]/25 overflow-hidden">
-        {/* Botanical Image Texture Backdrop */}
-        <div className="absolute inset-0 pointer-events-none opacity-20 mix-blend-luminosity">
-          <img
-            src={heroImg}
-            alt=""
-            className="w-full h-full object-cover scale-105"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#091810] via-[#091810]/85 to-[#091810] pointer-events-none" />
-
-        {/* Ambient Radial Lighting Glows */}
-        <div className="absolute -top-32 -left-32 w-[450px] h-[450px] bg-emerald-500/15 rounded-full blur-[130px] pointer-events-none" />
-        <div className="absolute -bottom-32 -right-32 w-[450px] h-[450px] bg-[#C59B4E]/15 rounded-full blur-[130px] pointer-events-none" />
-
-        <div className="container-editorial relative z-10 reveal">
+      <section className="py-24 bg-[#F4F1EA] border-b border-border/60">
+        <div className="container-editorial reveal">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <p className="eyebrow text-[#C59B4E] tracking-[0.25em] font-semibold">
+            <p className="eyebrow text-forest font-semibold tracking-[0.2em]">
               Guiding Principles
             </p>
-            <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl text-white font-semibold tracking-tight">
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl text-forest-deep font-semibold tracking-tight">
               Our Vision &amp; Mission
             </h2>
-            <p className="mt-4 text-base text-cream/75 max-w-xl mx-auto leading-relaxed">
+            <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
               Anchored in integrity, quality sourcing, and long-term customer partnerships.
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-12 items-stretch">
-            {/* OUR VISION CARD */}
-            <div className="lg:col-span-5 rounded-2xl border border-[#C59B4E]/35 bg-gradient-to-br from-[#122A1E]/95 via-[#0B1D14]/95 to-[#07140D]/95 p-8 sm:p-10 text-white flex flex-col justify-between shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-[#C59B4E]/60 transition-all duration-300">
-              <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#C59B4E]/15 rounded-full blur-2xl pointer-events-none" />
+            {/* OUR VISION CARD - Solid Deep Emerald Box */}
+            <div className="lg:col-span-5 rounded-2xl bg-[#0e2a1e] border border-[#1a4231] p-8 sm:p-10 text-white flex flex-col justify-between shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-[#C59B4E] via-forest to-transparent rounded-full" />
 
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-[#C59B4E]/50 bg-[#C59B4E]/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#E8C77B] mb-6">
-                  <Compass className="h-3.5 w-3.5 text-[#C59B4E]" />
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#E8C77B] border border-white/15 mb-6">
+                  <Compass className="h-4 w-4 text-[#C59B4E]" />
                   OUR VISION
                 </div>
 
-                <h3 className="font-display text-2xl sm:text-3xl text-cream font-medium leading-snug">
+                <h3 className="font-display text-2xl sm:text-3xl text-white font-medium leading-snug mt-2">
                   To become a trusted and preferred partner for nutraceutical ingredients by delivering reliable sourcing solutions and supporting the growth of health and wellness businesses.
                 </h3>
               </div>
 
-              <div className="mt-10 pt-6 border-t border-white/10 flex items-center justify-between text-xs text-cream/70">
-                <span className="uppercase tracking-wider font-mono text-[0.7rem] text-cream/50">Core Purpose</span>
-                <span className="font-medium text-[#E8C77B] flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#C59B4E]" />
+              <div className="mt-10 pt-6 border-t border-white/15 flex items-center justify-between text-xs text-cream/80">
+                <span className="uppercase tracking-wider font-mono text-[0.7rem] text-cream/60">Core Purpose</span>
+                <span className="font-medium text-[#E8C77B] flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[#C59B4E]" />
                   Reliability • Growth • Trust
                 </span>
               </div>
             </div>
 
-            {/* OUR MISSION CARD */}
-            <div className="lg:col-span-7 rounded-2xl border border-white/15 bg-gradient-to-br from-white/[0.08] to-white/[0.03] p-8 sm:p-10 flex flex-col justify-between shadow-2xl backdrop-blur-xl relative overflow-hidden group hover:border-white/30 transition-all duration-300">
-              <div className="absolute -top-16 -right-16 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+            {/* OUR MISSION CARD - Solid White High-End Box */}
+            <div className="lg:col-span-7 rounded-2xl bg-white border border-border/80 p-8 sm:p-10 text-forest-deep flex flex-col justify-between shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-forest via-sage to-transparent rounded-full" />
 
               <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-emerald-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-300 mb-6">
-                  <Target className="h-3.5 w-3.5 text-emerald-400" />
+                <div className="inline-flex items-center gap-2 rounded-full bg-sage-soft/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-forest border border-forest/20 mb-6">
+                  <Target className="h-4 w-4 text-forest" />
                   OUR MISSION
                 </div>
 
-                <ul className="space-y-3.5">
+                <ul className="space-y-3.5 mt-2">
                   {[
                     "To supply quality-focused nutraceutical ingredients.",
                     "To provide reliable and efficient sourcing solutions.",
@@ -424,12 +409,12 @@ function Home() {
                   ].map((point, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3.5 p-3 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-[#C59B4E]/30 transition-all duration-200"
+                      className="flex items-start gap-3.5 p-3.5 rounded-xl bg-[#FAF9F5] border border-border/60 hover:border-forest/40 hover:bg-[#F3EFE6] transition-all duration-200"
                     >
-                      <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C59B4E]/20 text-[#E8C77B] border border-[#C59B4E]/30">
+                      <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-forest text-white shadow-xs">
                         <CheckCircle2 className="h-3.5 w-3.5" />
                       </div>
-                      <span className="text-sm sm:text-base font-normal text-cream/95 leading-relaxed">
+                      <span className="text-sm sm:text-base font-medium text-forest-deep leading-relaxed">
                         {point}
                       </span>
                     </li>
@@ -437,15 +422,16 @@ function Home() {
                 </ul>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-cream/60">
+              <div className="mt-8 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
+                <p className="text-xs text-muted-foreground font-medium">
                   Partner with SVS for consistent quality &amp; supply solutions.
                 </p>
                 <Link
                   to="/products"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#E8C77B] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-forest hover:text-forest-deep transition-colors group"
                 >
-                  Browse Product Catalog <ArrowRight className="h-3.5 w-3.5" />
+                  Browse Product Catalog
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
