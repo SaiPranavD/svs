@@ -14,10 +14,8 @@ import {
   PackageCheck,
   Layers,
   Dna,
-  FileCheck2,
-  Users,
 } from "lucide-react";
-import heroCleanBg from "@/assets/hero-clean-background.jpg";
+import heroBannerImg from "@/assets/hero-banner.png";
 import labImg from "@/assets/research-lab.jpg";
 
 export const Route = createFileRoute("/")({
@@ -71,153 +69,53 @@ function Home() {
 
   return (
     <>
-      {/* 1. STARTING PAGE HERO SECTION */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-between overflow-hidden">
-        {/* Crisp Photographic Background: Authentic marble, bokeh, botanical plants & beaker (NO white wash overlay) */}
-        <div className="absolute inset-0 z-0">
+      {/* 1. STARTING PAGE HERO BANNER */}
+      <section className="relative w-full bg-white overflow-hidden border-b border-border/40">
+        <div className="w-full max-w-[1720px] mx-auto">
           <img
-            src={heroCleanBg}
-            alt="SVS Botanical & Laboratory Ingredients"
-            className="h-full w-full object-cover object-right lg:object-center"
+            src={heroBannerImg}
+            alt="SVS Nutraceuticals — Your Trusted Trading Partner for Nutraceutical Ingredients"
+            className="w-full h-auto block object-contain"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
 
-        {/* Top Right Ribbon Badge (QUALITY • PURITY • TRUST) */}
-        <div className="hidden lg:flex flex-col items-center justify-center absolute top-0 right-10 xl:right-16 w-24 pt-7 pb-5 bg-forest-deep text-white shadow-2xl rounded-b-xl border-x border-b border-amber-400/40 z-20">
-          <div className="h-9 w-9 rounded-full border border-amber-400/60 flex items-center justify-center text-[#C59B4E] mb-2.5 bg-forest-deep/90 shadow-inner">
-            <Leaf className="h-4 w-4" />
-          </div>
-          <span className="text-[0.62rem] font-bold tracking-[0.24em] text-cream leading-tight">QUALITY</span>
-          <span className="text-[0.62rem] font-bold tracking-[0.24em] text-cream leading-tight mt-0.5">PURITY</span>
-          <span className="text-[0.62rem] font-bold tracking-[0.24em] text-[#C59B4E] leading-tight mt-0.5">TRUST</span>
-        </div>
-
-        {/* Main Content Area: Ultra-Crisp Vector Typography & Icons */}
-        <div className="container-editorial relative z-10 pt-8 sm:pt-12 pb-10 lg:py-14 flex-1 flex flex-col justify-center">
-          <div className="max-w-2xl reveal">
-            {/* SVS Official Company Logo */}
-            <div className="flex items-center gap-3.5 sm:gap-4 mb-6 sm:mb-7">
-              <img
-                src="/logo-mark.png"
-                alt="SVS Logo"
-                className="h-14 w-14 sm:h-18 sm:w-18 lg:h-20 lg:w-20 object-contain drop-shadow-sm shrink-0"
-              />
-              <div className="flex flex-col">
-                <span className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-forest-deep leading-none">
-                  SVS
-                </span>
-                <span className="text-[0.7rem] sm:text-xs font-bold tracking-[0.34em] text-forest-deep mt-1 leading-none">
-                  NUTRACEUTICALS
-                </span>
-                <div className="flex items-center gap-2 mt-1.5">
-                  <span className="h-[1px] w-5 bg-amber-600/60" />
-                  <span className="text-[0.6rem] sm:text-[0.68rem] font-semibold tracking-[0.24em] text-amber-800 uppercase leading-none">
-                    INNOVATING HEALTH &amp; WELLNESS
-                  </span>
-                  <span className="h-[1px] w-5 bg-amber-600/60" />
-                </div>
-              </div>
-            </div>
-
-            {/* Three-Line Headline */}
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-bold leading-[1.12] tracking-tight text-forest-deep">
-              QUALITY INGREDIENTS. <br />
-              <span className="text-[#B4833E]">BETTER SOLUTIONS.</span> <br />
-              STRONGER PARTNERSHIPS.
-            </h1>
-
-            {/* Subtitle */}
-            <p className="mt-4 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-foreground/90 font-normal">
-              Your trusted partner for Nutraceutical Ingredients, Vitamins, Herbal Extracts, Amino Acids, Minerals and Specialty Ingredients.
-            </p>
-
-            {/* 4 Feature Badges (3rd 'Scientifically Sourced' removed, clean vector layout) */}
-            <div className="mt-7 flex flex-wrap items-center gap-4 sm:gap-6 pt-1">
-              {[
-                {
-                  icon: Leaf,
-                  line1: "PREMIUM",
-                  line2: "QUALITY",
-                },
-                {
-                  icon: ShieldCheck,
-                  line1: "RELIABLE",
-                  line2: "SUPPLY",
-                },
-                {
-                  icon: FileCheck2,
-                  line1: "COMPLETE",
-                  line2: "DOCUMENTATION",
-                },
-                {
-                  icon: Users,
-                  line1: "CUSTOMER",
-                  line2: "FOCUSED",
-                },
-              ].map((badge, idx, arr) => {
-                const Icon = badge.icon;
-                return (
-                  <div key={idx} className="flex items-center gap-4 sm:gap-6">
-                    <div className="flex flex-col items-center text-center group">
-                      <div className="h-12 w-12 rounded-full border-2 border-forest-deep/30 bg-white/90 shadow-sm flex items-center justify-center text-forest-deep mb-2 group-hover:border-forest group-hover:text-forest transition-colors">
-                        <Icon className="h-5 w-5 stroke-[1.85]" />
-                      </div>
-                      <span className="text-[0.65rem] sm:text-[0.7rem] font-bold uppercase tracking-wider text-forest-deep leading-tight">
-                        {badge.line1} <br />
-                        {badge.line2}
-                      </span>
-                    </div>
-                    {idx < arr.length - 1 && (
-                      <div className="h-10 w-[1.5px] bg-forest-deep/20 hidden sm:block" />
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Action Button: Explore Our Products */}
-            <div className="mt-8 flex items-center gap-4">
-              <Link
-                to="/products"
-                className="group inline-flex items-center gap-3 rounded-full bg-forest-deep py-1.5 pl-2 pr-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-forest hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-              >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-amber-400/40 bg-forest-deep text-[#C59B4E] group-hover:scale-105 transition-transform">
-                  <Leaf className="h-4 w-4" />
-                </span>
-                <span className="px-2.5 text-white">Explore Our Products</span>
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-[#C59B4E] to-[#9C702E] text-white group-hover:translate-x-0.5 transition-transform">
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Ticker Bar Across Full Width */}
-        <div className="relative z-10 w-full bg-forest-deep text-white py-3 px-4 border-t border-amber-400/25 shadow-md">
-          <div className="container-editorial flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-8 gap-y-2 text-[0.68rem] sm:text-xs font-semibold tracking-widest uppercase">
-            {[
-              { label: "NUTRACEUTICALS", search: undefined, hash: undefined },
-              { label: "VITAMINS", search: { category: "natural-vitamins", tab: "vitamins-minerals" }, hash: "natural-vitamins" },
-              { label: "HERBAL EXTRACTS", search: { category: "herbal-extracts", tab: "herbal-extracts" }, hash: "herbal-extracts" },
-              { label: "AMINO ACIDS", search: { category: "signature-products" }, hash: "signature-products" },
-              { label: "MINERALS", search: { category: "natural-minerals", tab: "vitamins-minerals" }, hash: "natural-minerals" },
-              { label: "SPECIALTY INGREDIENTS", search: { category: "custom-formulations", tab: "vitamins-minerals" }, hash: "custom-formulations" },
-            ].map((item, idx, arr) => (
-              <Link
-                key={item.label}
-                to="/products"
-                search={item.search}
-                hash={item.hash}
-                className="flex items-center gap-2 text-cream/90 hover:text-white transition-colors cursor-pointer"
-              >
-                <Leaf className="h-3.5 w-3.5 text-[#C59B4E] shrink-0" />
-                <span>{item.label}</span>
-                {idx < arr.length - 1 && (
-                  <span className="text-white/25 ml-4 hidden md:inline">|</span>
-                )}
-              </Link>
-            ))}
+        <div className="relative z-10 w-full bg-forest-deep text-white py-3 sm:py-3.5 px-4 border-t border-amber-400/25 shadow-md">
+          <div className="container-editorial flex flex-wrap items-center justify-center lg:justify-between gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 sm:gap-x-7 gap-y-2 text-[0.68rem] sm:text-xs font-semibold tracking-widest uppercase">
+              {[
+                { label: "NUTRACEUTICALS", search: undefined, hash: undefined },
+                { label: "VITAMINS", search: { category: "natural-vitamins", tab: "vitamins-minerals" }, hash: "natural-vitamins" },
+                { label: "HERBAL EXTRACTS", search: { category: "herbal-extracts", tab: "herbal-extracts" }, hash: "herbal-extracts" },
+                { label: "AMINO ACIDS", search: { category: "signature-products" }, hash: "signature-products" },
+                { label: "MINERALS", search: { category: "natural-minerals", tab: "vitamins-minerals" }, hash: "natural-minerals" },
+                { label: "SPECIALTY INGREDIENTS", search: { category: "custom-formulations", tab: "vitamins-minerals" }, hash: "custom-formulations" },
+              ].map((item, idx, arr) => (
+                <Link
+                  key={item.label}
+                  to="/products"
+                  search={item.search}
+                  hash={item.hash}
+                  className="flex items-center gap-2 text-cream/90 hover:text-white transition-colors cursor-pointer"
+                >
+                  <Leaf className="h-3.5 w-3.5 text-[#C59B4E] shrink-0" />
+                  <span>{item.label}</span>
+                  {idx < arr.length - 1 && (
+                    <span className="text-white/25 ml-3 hidden md:inline">|</span>
+                  )}
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 rounded-full bg-[#C59B4E] hover:bg-[#b0873c] text-forest-deep px-5 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer shrink-0"
+            >
+              <span>Explore Products</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
         </div>
       </section>
