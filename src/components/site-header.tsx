@@ -40,6 +40,13 @@ export function SiteHeader() {
           >
             Products
           </Link>
+          <Link
+            to="/contact"
+            className="text-[0.85rem] font-medium tracking-wide text-foreground/80 transition-colors duration-300 hover:text-forest"
+            activeProps={{ className: "text-forest underline decoration-2 underline-offset-8 font-semibold" }}
+          >
+            Contact Us
+          </Link>
         </nav>
         <button className="md:hidden text-foreground" onClick={() => setOpen((o) => !o)} aria-label="Toggle menu">
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -68,6 +75,13 @@ export function SiteHeader() {
               className="rounded-md px-2 py-2 text-sm text-foreground/80 hover:bg-secondary"
             >
               Products
+            </Link>
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="rounded-md px-2 py-2 text-sm text-foreground/80 hover:bg-secondary"
+            >
+              Contact Us
             </Link>
           </nav>
         </div>

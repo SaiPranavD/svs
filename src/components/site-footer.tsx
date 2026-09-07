@@ -39,14 +39,37 @@ export function SiteFooter() {
                 Products
               </Link>
             </li>
+            <li>
+              <Link to="/contact" className="hover:text-cream">
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div>
           <p className="eyebrow text-sage">Get in touch</p>
           <ul className="mt-4 space-y-2 text-sm text-cream/80">
-            <li>info@svsnutraceuticals.com</li>
-            <li>+91 78429 51590</li>
+            <li>
+              <a href="mailto:info@svsnutraceuticals.com" className="hover:text-cream transition-colors">
+                info@svsnutraceuticals.com
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <a href="tel:+917842951590" className="hover:text-cream transition-colors">
+                +91 78429 51590
+              </a>
+              <span className="text-cream/30">|</span>
+              <a
+                href="https://wa.me/917842951590?text=Hello%20SVS%20Nutraceuticals%2C%20I%20would%20like%20to%20inquire%20about%20your%20nutraceutical%20ingredients."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25D366] hover:text-[#20ba59] font-medium inline-flex items-center gap-1 transition-colors"
+                aria-label="Chat on WhatsApp"
+              >
+                WhatsApp
+              </a>
+            </li>
             <li className="mt-3 text-xs leading-relaxed text-cream/70">
               <strong>Address:</strong><br />
               2-6-314, JAIPURI COLONY,<br />
