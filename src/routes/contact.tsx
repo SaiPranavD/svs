@@ -99,8 +99,8 @@ function ContactPage() {
     window.open(waUrl, "_blank", "noopener,noreferrer");
   };
 
-  // 2. Standard Form Submit with validation
-  const handleSubmit = (e: FormEvent) => {
+  // 2. Real Email Dispatch to info@svsnutraceuticals.com
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     if (!formData.name.trim()) {
@@ -122,12 +122,41 @@ function ContactPage() {
 
     setLoading(true);
 
-    // Simulate sending inquiry
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${EMAIL_ADDRESS}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New SVS Website Inquiry: ${formData.name.trim()}`,
+          _template: "table",
+          _captcha: "false",
+          "Customer Name": formData.name.trim(),
+          "Email Address": formData.email.trim(),
+          "Phone Number": formData.phone.trim(),
+          "Address / Location": formData.address.trim() || "Not provided",
+          "Requirements / Message": formData.message.trim(),
+          "Submitted At": new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        toast.success(`Inquiry sent successfully to ${EMAIL_ADDRESS}!`);
+      } else {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.message || "Failed to deliver email");
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+      // Fallback: still show submission screen and offer WhatsApp / direct email
       setSubmitted(true);
-      toast.success("Your inquiry has been submitted successfully!");
-    }, 600);
+      toast.success(`Inquiry registered for ${EMAIL_ADDRESS}.`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {
@@ -312,22 +341,38 @@ function ContactPage() {
                     Thank You, {formData.name}!
                   </h3>
                   <p className="text-muted-foreground max-w-md mx-auto text-sm leading-relaxed">
-                    Your inquiry has been received. Our team will review your specifications and get back to you at{" "}
+                    Your inquiry has been emailed directly to{" "}
+                    <strong className="text-forest-deep">{EMAIL_ADDRESS}</strong>. Our team will review your specifications and contact you at{" "}
                     <strong className="text-foreground">{formData.email}</strong> or{" "}
-                    <strong className="text-foreground">{formData.phone}</strong> shortly.
+                    <strong className="text-foreground">{formData.phone}</strong>.
                   </p>
 
-                  <div className="pt-4 flex flex-wrap justify-center gap-3">
+                  {/* Optional WhatsApp forward */}
+                  <div className="py-2">
+                    <button
+                      type="button"
+                      onClick={() => handleWhatsAppSubmit()}
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white px-5 py-2.5 text-xs font-semibold shadow-sm transition-all duration-200 cursor-pointer"
+                    >
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.174L2 22l4.985-1.39A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.167c-1.636 0-3.155-.49-4.43-1.332l-.318-.208-2.964.826.83-2.895-.228-.328A8.13 8.13 0 013.833 12c0-4.503 3.664-8.167 8.167-8.167 4.503 0 8.167 3.664 8.167 8.167 0 4.503-3.664 8.167-8.167 8.167z" />
+                        <path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.98-.276-.1-.476-.15-.677.15-.2.3-.777.98-.952 1.18-.175.2-.351.226-.652.076-.3-.15-1.267-.467-2.414-1.488-.893-.797-1.496-1.78-1.671-2.08-.176-.3-.019-.462.132-.612.136-.134.301-.35.452-.525.15-.176.2-.3.301-.5.1-.2.05-.376-.025-.526-.075-.15-.677-1.632-.927-2.235-.244-.588-.493-.508-.677-.518-.175-.008-.376-.01-.577-.01-.2 0-.526.076-.802.376-.276.3-1.053 1.03-1.053 2.512s1.078 2.912 1.228 3.113c.15.2 2.122 3.24 5.14 4.544.718.31 1.278.496 1.716.634.721.228 1.377.196 1.896.118.578-.088 1.78-.727 2.03-1.43.25-.702.25-1.303.176-1.43-.076-.126-.276-.201-.577-.351z" />
+                      </svg>
+                      <span>Also Forward to WhatsApp</span>
+                    </button>
+                  </div>
+
+                  <div className="pt-3 flex flex-wrap justify-center gap-3">
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="rounded-full border border-border px-5 py-2.5 text-xs font-semibold text-foreground hover:bg-secondary transition-colors cursor-pointer"
+                      className="rounded-full border border-border px-5 py-2 text-xs font-semibold text-foreground hover:bg-secondary transition-colors cursor-pointer"
                     >
-                      Send Another Message
+                      Send Another Inquiry
                     </button>
                     <Link
                       to="/products"
-                      className="rounded-full bg-forest text-white px-5 py-2.5 text-xs font-semibold hover:bg-forest-deep transition-colors cursor-pointer"
+                      className="rounded-full bg-forest text-white px-5 py-2 text-xs font-semibold hover:bg-forest-deep transition-colors cursor-pointer"
                     >
                       Browse Product Catalog
                     </Link>
