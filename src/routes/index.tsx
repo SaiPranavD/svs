@@ -16,6 +16,7 @@ import {
   Dna,
 } from "lucide-react";
 import heroBannerImg from "@/assets/hero-banner.png";
+import heroBannerMobileImg from "@/assets/hero-banner-mobile.jpg";
 import labImg from "@/assets/research-lab.jpg";
 
 export const Route = createFileRoute("/")({
@@ -72,13 +73,16 @@ function Home() {
       {/* 1. STARTING PAGE HERO BANNER */}
       <section className="relative w-full bg-white overflow-hidden border-b border-border/40">
         <div className="w-full max-w-[1720px] mx-auto">
-          <img
-            src={heroBannerImg}
-            alt="SVS Nutraceuticals — Your Trusted Trading Partner for Nutraceutical Ingredients"
-            className="w-full h-auto block object-contain"
-            loading="eager"
-            fetchPriority="high"
-          />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={heroBannerMobileImg} />
+            <img
+              src={heroBannerImg}
+              alt="SVS Nutraceuticals — Quality Ingredients. Reliable Supply. Your Trusted Trading Partner for Nutraceutical Ingredients"
+              className="w-full h-auto block object-contain"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </picture>
         </div>
 
         {/* Bottom Ticker Bar Across Full Width */}
