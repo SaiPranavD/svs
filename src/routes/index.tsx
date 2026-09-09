@@ -94,7 +94,6 @@ function Home() {
                 { label: "VITAMINS", search: { category: "natural-vitamins", tab: "vitamins-minerals" }, hash: "natural-vitamins" },
                 { label: "HERBAL EXTRACTS", search: { category: "herbal-extracts", tab: "herbal-extracts" }, hash: "herbal-extracts" },
                 { label: "AMINO ACIDS", search: { category: "signature-products" }, hash: "signature-products" },
-                { label: "MINERALS", search: { category: "natural-minerals", tab: "vitamins-minerals" }, hash: "natural-minerals" },
                 { label: "SPECIALTY INGREDIENTS", search: { category: "custom-formulations", tab: "vitamins-minerals" }, hash: "custom-formulations" },
               ].map((item, idx, arr) => (
                 <Link
