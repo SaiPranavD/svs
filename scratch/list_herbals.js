@@ -3,7 +3,7 @@ const text = fs.readFileSync('src/lib/products.ts', 'utf8');
 const blocks = text.split(/\{\s*"slug":/);
 let count = 0;
 blocks.forEach((b) => {
-  if (b.includes('"category": "essential-oils"')) {
+  if (b.includes('"category": "herbal-extracts"')) {
     count++;
     const nameMatch = b.match(/"name":\s*"([^"]+)"/);
     const slugMatch = b.match(/^\s*"([^"]+)"/);
