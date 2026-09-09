@@ -1464,39 +1464,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "slug": "spirulina-powder",
-    "name": "Spirulina powder",
-    "botanical": "Arthrospira platensis",
-    "category": "natural-vitamins",
-    "tagline": "Premium nutrient-dense blue-green algae powder",
-    "image": "/products/spirulina-powder.jpg",
-    "standardization": "Protein ≥ 60%",
-    "partUsed": "Whole Biomass",
-    "origin": "India",
-    "benefits": [
-      "Exceptionally rich source of vitamins & minerals",
-      "Supports cardiovascular & immune defenses",
-      "Promotes cell detoxification & energy levels"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Nutraceuticals",
-      "Superfood Powder Blends"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Fine dark green powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO 22000"
-    ]
-  },
-  {
     "slug": "banaba-extract",
     "name": "Banaba Extract",
     "botanical": "Lagerstroemia speciosa",
@@ -1521,39 +1488,6 @@ export const products: Product[] = [
       {
         "label": "Appearance",
         "value": "Light brown powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO 22000"
-    ]
-  },
-  {
-    "slug": "aloe-vera-powder",
-    "name": "Aloe Vera Powder",
-    "botanical": "Aloe barbadensis",
-    "category": "natural-vitamins",
-    "tagline": "Nutritious freeze-dried Aloe Vera leaf gel powder",
-    "image": "/products/aloe-vera-powder.jpg",
-    "standardization": "Aloin-free / 200:1 Concentration",
-    "partUsed": "Leaf Gel",
-    "origin": "India",
-    "benefits": [
-      "Supports digestive and gastrointestinal comfort",
-      "Rich in natural vitamins, minerals, and enzymes",
-      "Promotes skin hydration and cell repair"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Cosmeceuticals",
-      "Functional Food"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Light cream powder"
       }
     ],
     "packaging": "25 kg fiber drum",
@@ -1950,39 +1884,6 @@ export const products: Product[] = [
       {
         "label": "Appearance",
         "value": "Light brown powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO 22000"
-    ]
-  },
-  {
-    "slug": "beet-root-powder",
-    "name": "Beet Root Powder",
-    "botanical": "Beta vulgaris",
-    "category": "natural-vitamins",
-    "tagline": "Premium organic Beet Root powder rich in nitrates",
-    "image": "/organic-products/beetroot-extract.jpg",
-    "standardization": "Nitrates ≥ 1.5%",
-    "partUsed": "Root",
-    "origin": "India",
-    "benefits": [
-      "Supports nitric oxide production for cardiovascular health",
-      "Enhances muscle oxygenation & stamina",
-      "Provides vital B vitamins and minerals"
-    ],
-    "applications": [
-      "Sports Nutrition",
-      "Superfood Blends",
-      "Dietary Supplements"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Deep red powder"
       }
     ],
     "packaging": "25 kg fiber drum",
@@ -2652,39 +2553,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "slug": "natural-biotin-d-biotin",
-    "name": "Natural Biotin (D Biotin)",
-    "botanical": "Sesbania grandiflora",
-    "category": "natural-vitamins",
-    "tagline": "Plant-derived D-Biotin to support hair, skin, and nail health",
-    "image": "/vitamins/sesbania-grandiflora.jpg",
-    "standardization": "D-Biotin ≥ 1% / 2%",
-    "partUsed": "Leaf",
-    "origin": "India",
-    "benefits": [
-      "Promotes hair strength and growth",
-      "Supports healthy skin and nails",
-      "Enhances energy metabolism"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Nutraceuticals",
-      "Cosmetics"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White to off-white powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
     "slug": "natural-vitamin-b1-thiamine-vitamin-b1-mono",
     "name": "Natural Vitamin B1 (Thiamine) (Vitamin B1 Mono)",
     "botanical": "Organic Guava / Lemon blend",
@@ -2944,103 +2812,6 @@ export const products: Product[] = [
       }
     ],
     "packaging": "25 kg drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "vitamin-b7",
-    "name": "Vitamin B7",
-    "botanical": "Sesbania grandiflora",
-    "category": "natural-vitamins",
-    "tagline": "B7 Biotin to support healthy metabolism and keratin structure",
-    "image": "/vitamins/sesbania-grandiflora.jpg",
-    "standardization": "Biotin ≥ 1%",
-    "partUsed": "Leaf",
-    "origin": "India",
-    "benefits": [
-      "Supports keratin production for hair/nails",
-      "Improves energy metabolism",
-      "Supports skin vitality"
-    ],
-    "applications": [
-      "Nutraceuticals",
-      "Cosmetics"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "vitamin-k3",
-    "name": "Vitamin K3",
-    "botanical": "Synthetic derivative",
-    "category": "natural-vitamins",
-    "tagline": "Vitamin K3 (Menadione) for specific wellness and industrial application support",
-    "image": "/products/pure-white-powder.jpg",
-    "standardization": "Menadione ≥ 50% / 96%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Acts as a blood clotting cofactor",
-      "Important precursor for active vitamin K",
-      "Supports cellular regulation"
-    ],
-    "applications": [
-      "Nutraceuticals",
-      "Feed Formulations"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White crystalline powder"
-      }
-    ],
-    "packaging": "25 kg drum",
-    "shelfLife": "24 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "vitamin-k27",
-    "name": "Vitamin k27",
-    "botanical": "Bacillus subtilis natto fermentation",
-    "category": "natural-vitamins",
-    "tagline": "High-potency Vitamin K2 (MK-7) to optimize bone mineralization and arterial health",
-    "image": "/products/natto-vitamin-k.jpg",
-    "standardization": "Menaquinone-7 (MK-7) 1000 ppm / 2000 ppm / 5000 ppm",
-    "partUsed": "Fermentation product",
-    "origin": "India",
-    "benefits": [
-      "Directs calcium to bones and away from arteries",
-      "Supports vascular and bone health",
-      "Synergizes with Vitamin D3"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Capsules",
-      "Nutraceuticals"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Light yellow powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
     "shelfLife": "36 months",
     "certifications": [
       "ISO"
