@@ -57,7 +57,6 @@ const categoryImages: Record<ProductCategory, string> = {
   "phytochemicals": catPhytoImg,
   "essential-oils": catOilsImg,
   "natural-vitamins": catMineralsImg,
-  "natural-minerals": catMineralsImg,
   "probiotics": catHerbalImg,
   "custom-formulations": catMineralsImg,
   "organic-products": catHerbalImg,
@@ -68,7 +67,6 @@ const categoryImages: Record<ProductCategory, string> = {
 function getSuperCategory(category: string): "herbal-extracts" | "essential-oils" | "vitamins-minerals" {
   if (
     category === "natural-vitamins" ||
-    category === "natural-minerals" ||
     category === "custom-formulations"
   ) {
     return "vitamins-minerals";
@@ -87,7 +85,6 @@ function ProductsPage() {
       search.tab === "vitamins-minerals" ||
       search.category === "vitamins-minerals" ||
       search.category === "natural-vitamins" ||
-      search.category === "natural-minerals" ||
       search.category === "custom-formulations"
     ) {
       return "vitamins-minerals";
@@ -107,7 +104,6 @@ function ProductsPage() {
       search.tab === "vitamins-minerals" ||
       search.category === "vitamins-minerals" ||
       search.category === "natural-vitamins" ||
-      search.category === "natural-minerals" ||
       search.category === "custom-formulations"
         ? "vitamins-minerals"
         : search.tab === "essential-oils" || search.category === "essential-oils"
@@ -311,7 +307,7 @@ function ProductsPage() {
                     <div className="p-5 flex flex-col justify-between flex-1 min-h-[140px]">
                       <div>
                         <div className="flex items-center gap-3">
-                          {catId === "natural-vitamins" || catId === "natural-minerals" || catId === "phytochemicals" ? (
+                          {catId === "natural-vitamins" || catId === "phytochemicals" ? (
                             <FlaskConical className="h-5 w-5 text-forest" />
                           ) : (
                             <Leaf className="h-5 w-5 text-forest" />

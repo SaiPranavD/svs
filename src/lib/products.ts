@@ -5,7 +5,6 @@ export type ProductCategory =
   | "essential-oils"
   | "probiotics"
   | "natural-vitamins"
-  | "natural-minerals"
   | "custom-formulations"
   | "organic-products"
   | "signature-products"
@@ -31,10 +30,6 @@ export const categories: Record<ProductCategory, { label: string; description: s
   "natural-vitamins": {
     label: "Natural Vitamins",
     description: "Plant-derived standardized organic vitamins for clean-label supplements.",
-  },
-  "natural-minerals": {
-    label: "Natural Minerals",
-    description: "Plant-sourced bioavailable organic mineral complexes.",
   },
   "custom-formulations": {
     label: "Custom Formulations",
@@ -2657,137 +2652,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "slug": "chromium-chloride",
-    "name": "Chromium Chloride",
-    "botanical": "Mineral source",
-    "category": "natural-minerals",
-    "tagline": "Essential trace mineral to support glucose tolerance and insulin sensitivity",
-    "image": "/products/green-crystals.jpg",
-    "standardization": "Chromium ≥ 99%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Supports glucose metabolism",
-      "Promotes insulin sensitivity",
-      "Trace element source"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Nutraceuticals"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Green crystalline powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "hiflow-super-cell",
-    "name": "Hiflow Super Cell",
-    "botanical": "Mineral source (Diatomaceous earth)",
-    "category": "natural-minerals",
-    "tagline": "High-performance filtration aid and clarifier for food and pharmaceutical processing",
-    "image": "/products/pure-white-powder.jpg",
-    "standardization": "Processing Aid",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Highly efficient filtration medium",
-      "Clarifies liquids and solutions",
-      "Chemically inert"
-    ],
-    "applications": [
-      "Pharmaceutical Processing",
-      "Food & Beverage Clarification"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White to off-white fine powder"
-      }
-    ],
-    "packaging": "25 kg bag",
-    "shelfLife": "60 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "magnesium-citrate-monohydrate-usp",
-    "name": "Magnesium citrate Monohydrate-USP",
-    "botanical": "Mineral source",
-    "category": "natural-minerals",
-    "tagline": "Highly bioavailable USP-grade magnesium complex to support bone and muscle health",
-    "image": "/products/pure-white-powder.jpg",
-    "standardization": "Magnesium content 11.5% - 13.0%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Supports bone health and density",
-      "Aids muscle function and relaxation",
-      "Highly bioavailable magnesium source"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Pharmaceuticals",
-      "Functional Beverages"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "USP",
-      "ISO"
-    ]
-  },
-  {
-    "slug": "magnesium-sulphate",
-    "name": "Magnesium Sulphate",
-    "botanical": "Mineral source",
-    "category": "natural-minerals",
-    "tagline": "Essential magnesium salt for electrolyte balance and pharmaceutical applications",
-    "image": "/products/pure-white-powder.jpg",
-    "standardization": "Magnesium Sulphate ≥ 99.5%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Helps maintain electrolyte balance",
-      "Supports muscular recovery",
-      "Relieves muscle soreness"
-    ],
-    "applications": [
-      "Nutraceuticals",
-      "Pharmaceuticals",
-      "Personal Care"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Colorless crystals or white crystalline powder"
-      }
-    ],
-    "packaging": "25 kg bag",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
     "slug": "natural-biotin-d-biotin",
     "name": "Natural Biotin (D Biotin)",
     "botanical": "Sesbania grandiflora",
@@ -2812,103 +2676,6 @@ export const products: Product[] = [
       {
         "label": "Appearance",
         "value": "White to off-white powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "natural-calcium-calcium-carbonate-ppt",
-    "name": "Natural Calcium (Calcium Carbonate PPT)",
-    "botanical": "Mineral source",
-    "category": "natural-minerals",
-    "tagline": "Precipitated calcium carbonate for bone density and calcium fortification",
-    "image": "/minerals/moringa-leaf-extract.jpg",
-    "standardization": "Calcium ≥ 38%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Supports bone health and structural integrity",
-      "Enhances teeth strength",
-      "Highly bioavailable calcium fortifier"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Food Fortification",
-      "Pharmaceuticals"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Fine white powder"
-      }
-    ],
-    "packaging": "25 kg bag",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "natural-copper-copper-sulphate",
-    "name": "Natural Copper (Copper Sulphate)",
-    "botanical": "Mineral source",
-    "category": "natural-minerals",
-    "tagline": "Essential trace mineral to support iron absorption and connective tissue health",
-    "image": "/products/blue-crystals.jpg",
-    "standardization": "Copper content ≥ 25%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Assists in red blood cell formation",
-      "Supports neurological health",
-      "Maintains healthy connective tissues"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Nutraceuticals"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Blue crystalline powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "natural-manganese-manganese-sulphate",
-    "name": "Natural Manganese (Manganese Sulphate)",
-    "botanical": "Mineral source",
-    "category": "natural-minerals",
-    "tagline": "Trace mineral to support bone health and antioxidant enzyme systems",
-    "image": "/products/pink-crystals.jpg",
-    "standardization": "Manganese content ≥ 32%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Cofactor for key antioxidant enzymes",
-      "Supports bone density and structure",
-      "Involved in amino acid metabolism"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Nutraceuticals"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Pale pink powder"
       }
     ],
     "packaging": "25 kg fiber drum",
@@ -3177,39 +2944,6 @@ export const products: Product[] = [
       }
     ],
     "packaging": "25 kg drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "potassium-chloride-ip",
-    "name": "Potassium Chloride IP",
-    "botanical": "Mineral source",
-    "category": "natural-minerals",
-    "tagline": "IP-grade potassium salt to support electrolyte balance and nervous transmission",
-    "image": "/products/pure-white-powder.jpg",
-    "standardization": "Potassium Chloride ≥ 99.0%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Essential electrolyte for cellular function",
-      "Supports normal nerve and heart function",
-      "Maintains fluid balance"
-    ],
-    "applications": [
-      "Pharmaceuticals",
-      "Rehydration Formulas",
-      "Dietary Supplements"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White crystalline powder"
-      }
-    ],
-    "packaging": "25 kg bag",
     "shelfLife": "36 months",
     "certifications": [
       "ISO"
