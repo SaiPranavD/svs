@@ -1271,39 +1271,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "slug": "tribulus-terrestris-extract",
-    "name": "Tribulus Terrestris Extract",
-    "botanical": "Tribulus terrestris",
-    "category": "natural-minerals",
-    "tagline": "High-purity Tribulus extract supporting vitality and mineral transport",
-    "image": "/products/tribulus-terrestris-extract.png",
-    "standardization": "Saponins ≥ 40% / 90%",
-    "partUsed": "Fruit",
-    "origin": "India",
-    "benefits": [
-      "Supports testosterone production & libido",
-      "Enhances athletic performance & stamina",
-      "Aids in kidney and urinary tract health"
-    ],
-    "applications": [
-      "Dietary Supplements",
-      "Sports Nutrition",
-      "Male Vitality Formulas"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Yellow-brown powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO 22000"
-    ]
-  },
-  {
     "slug": "lycopene",
     "name": "Lycopene",
     "botanical": "Solanum lycopersicum",
@@ -2690,39 +2657,6 @@ export const products: Product[] = [
     ]
   },
   {
-    "slug": "cholesterol-95",
-    "name": "Cholesterol 95%",
-    "botanical": "Animal source",
-    "category": "natural-minerals",
-    "tagline": "High-purity cholesterol for liposomes and pharmaceutical formulations",
-    "image": "/products/pure-white-powder.jpg",
-    "standardization": "Cholesterol ≥ 95%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Essential component for liposomal drug delivery",
-      "Stabilizes cell membranes",
-      "Improves formulation stability"
-    ],
-    "applications": [
-      "Pharmaceuticals",
-      "Cosmetics",
-      "Research"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White or almost white crystalline powder"
-      }
-    ],
-    "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
     "slug": "chromium-chloride",
     "name": "Chromium Chloride",
     "botanical": "Mineral source",
@@ -2749,71 +2683,6 @@ export const products: Product[] = [
       }
     ],
     "packaging": "25 kg fiber drum",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "citric-acid",
-    "name": "Citric Acid",
-    "botanical": "Citrus fruits (natural source)",
-    "category": "natural-minerals",
-    "tagline": "Natural preservative and acidulant for food and pharmaceuticals",
-    "image": "/vitamins/citrus-limon.jpg",
-    "standardization": "Anhydrous / Monohydrate ≥ 99.5%",
-    "partUsed": "N/A",
-    "origin": "India",
-    "benefits": [
-      "Natural acidulant",
-      "Acts as an antioxidant synergist",
-      "Enhances preservation"
-    ],
-    "applications": [
-      "Food & Beverage",
-      "Pharmaceuticals"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White crystalline powder"
-      }
-    ],
-    "packaging": "25 kg bag",
-    "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "gum-acacia",
-    "name": "Gum Acacia",
-    "botanical": "Acacia senegal",
-    "category": "natural-minerals",
-    "tagline": "Natural stabilizer, binder, and dietary fiber source",
-    "image": "/products/acacia-catechu.jpg",
-    "standardization": "Soluble dietary fiber ≥ 85%",
-    "partUsed": "Bark exudate",
-    "origin": "India",
-    "benefits": [
-      "Natural binding agent",
-      "Excellent prebiotic fiber",
-      "Emulsion stabilizer"
-    ],
-    "applications": [
-      "Nutraceuticals",
-      "Food Industry",
-      "Pharmaceutical Excipient"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "Off-white to pale yellow powder"
-      }
-    ],
-    "packaging": "25 kg bag",
     "shelfLife": "36 months",
     "certifications": [
       "ISO"
@@ -2914,39 +2783,6 @@ export const products: Product[] = [
     ],
     "packaging": "25 kg bag",
     "shelfLife": "36 months",
-    "certifications": [
-      "ISO"
-    ]
-  },
-  {
-    "slug": "maltodextrin",
-    "name": "Maltodextrin",
-    "botanical": "Zea mays (Corn)",
-    "category": "natural-minerals",
-    "tagline": "Premium carbohydrate excipient, carrier, and spray-drying aid",
-    "image": "/products/pure-white-powder.jpg",
-    "standardization": "Dextrose Equivalent (DE) 10-15 / 15-20",
-    "partUsed": "Starch hydrolysate",
-    "origin": "India",
-    "benefits": [
-      "Ideal carrier for spray drying",
-      "Provides quick energy release",
-      "Improves texture and solubility"
-    ],
-    "applications": [
-      "Spray Drying Carrier",
-      "Nutraceuticals",
-      "Food & Beverage"
-    ],
-    "composition": [],
-    "specs": [
-      {
-        "label": "Appearance",
-        "value": "White powder"
-      }
-    ],
-    "packaging": "25 kg bag",
-    "shelfLife": "24 months",
     "certifications": [
       "ISO"
     ]
